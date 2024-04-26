@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={` ${inter.className}`}>
-        <h1>home</h1>
+        <h1>OTIMIZE, ACELERE, ALCANCE!</h1>
       </main>
     </>
   );
