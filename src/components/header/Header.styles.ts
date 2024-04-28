@@ -6,7 +6,15 @@ export const Component = styled.div`
   align-items: center;
   gap: 2.5rem;
   height: 100px;
-  border-right: 1px solid #e9ebf1;
   background-color: #235c88;
+  border-right: 1px solid #e9ebf1;
+  box-shadow: 0px 8px 10px 3px #0000001a;
   z-index: 100;
+
+  &.active {
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+    transition: all 750ms;
+  }
 `;
