@@ -5,11 +5,7 @@ import * as S from './Header.styles';
 import { SiderProps } from './models';
 
 const Header = ({ children }: SiderProps) => {
-    return (
-        <S.Component>
-            <S.Content>{children}</S.Content>
-        </S.Component>
-    );
+    return <S.Component>{children}</S.Component>;
 };
 
 export default Header;

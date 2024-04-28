@@ -10,7 +10,7 @@ import { ItemGroupProps } from './models';
 const ItemGroup = ({ children }: ItemGroupProps) => {
     return (
         <S.Component>
-            <S.Content>{children}</S.Content>
+            {children}
         </S.Component>
     );
 };

@@ -1,12 +1,8 @@
-// React
+// Styles
 import * as S from './Loading.styles';
 
 const Loading = () => {
-  return (
-    <S.Component>
-      <span />
-    </S.Component>
-  );
+  return <S.Component />;
 };
 
 export default Loading;

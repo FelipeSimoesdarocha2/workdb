@@ -1,9 +1,3 @@
-// React
-import * as React from 'react';
-
-// Styles
-import * as S from './Menu.styles';
-
 // Models
 import { MenuProps } from './models';
 
@@ -12,7 +6,7 @@ import { Item } from './item';
 import { ItemGroup } from './itemGroup';
 
 const Menu = ({ children }: MenuProps) => {
-  return <S.Component>{children}</S.Component>;
+  return <>{children}</>;
 };
 
 type CompoundedComponent = typeof Menu & {
