@@ -27,13 +27,6 @@ const Internationalization = () => {
   const pathname = usePathname();
   const componentRef = useRef<HTMLDivElement>(null);
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (componentRef.current && !componentRef.current.contains(event.target as HTMLElement)) {
-      setOpenList(false);
-      setIsFocused(false);
-    }
-  };
-
   const handleOptionClick = (optionValue: string) => {
     setSelectedOption(optionValue);
     onChangeValue({ target: { value: optionValue } });
@@ -50,18 +43,24 @@ const Internationalization = () => {
     onChangeLanguage(value);
   };
 
-  let imageSrc;
-
+  let flagSrc;
   switch (languageSelected) {
     case 'pt':
-      imageSrc = pt;
+      flagSrc = pt;
       break;
     case 'en':
-      imageSrc = en;
+      flagSrc = en;
       break;
     default:
-      imageSrc = pt;
+      flagSrc = pt;
   }
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (componentRef.current && !componentRef.current.contains(event.target as HTMLElement)) {
+      setOpenList(false);
+      setIsFocused(false);
+    }
+  };
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -75,7 +74,7 @@ const Internationalization = () => {
       <S.Content>
         <S.Wrapper>
           <S.Value>
-            <Image src={imageSrc} alt="Logo" width={22} draggable={'false'} />
+            <Image src={flagSrc} alt="Flag" width={22} draggable={'false'} />
             <S.Label>{itens.find(e => e.value === languageSelected)?.label}</S.Label>
           </S.Value>
           <span className={`${isFocused ? 'focused-arrow' : null}`}>
@@ -85,15 +84,18 @@ const Internationalization = () => {
         {openList && (
           <S.Inner className={`${isFocused ? 'focused' : null}`}>
             <S.List>
-              {itens.map((option, key) => (
-                <S.Item
-                  key={key}
-                  onClick={() => handleOptionClick(option.value)}
-                  className={`${selectedOption === option.label ? `${'selected'}` : null}`}
-                >
-                  <S.Label>{option.label}</S.Label>
-                </S.Item>
-              ))}
+              {itens
+                .filter(e => e.value !== selectedOption)
+                .map((option, key) => (
+                  <S.Item
+                    key={key}
+                    onClick={() => handleOptionClick(option.value)}
+                    className={`${selectedOption === option.label ? `${'selected'}` : null}`}
+                  >
+                    <Image src={option.value === 'en' ? en : pt} alt="Flag" width={22} draggable={'false'} />
+                    <S.Label>{option.label}</S.Label>
+                  </S.Item>
+                ))}
             </S.List>
           </S.Inner>
         )}

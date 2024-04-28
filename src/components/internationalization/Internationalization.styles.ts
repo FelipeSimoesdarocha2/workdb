@@ -74,8 +74,9 @@ export const Inner = styled.div`
   position: absolute;
   top: 31px;
   width: 118px;
-  height: 40px;
-  padding: 4px 12px;
+  min-height: 40px;
+  height: 100%;
+  padding: 0 12px;
   background: #ffffff;
   border-radius: 0px 0px 10px 10px;
   box-shadow: 0px 5px 5px 0px #cccccc;
@@ -88,10 +89,11 @@ export const Inner = styled.div`
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
 `;
 
 export const Item = styled.li`
-
-
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;

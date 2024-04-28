@@ -20,7 +20,7 @@ const NotFound = () => {
       </Head>
       <Layout>
         <h1>Esta pagina não existe</h1>
-        <button onClick={handleBack}>
+        <button onClick={handleBack} aria-label="back">
           <h1>voltar</h1>
         </button>
       </Layout>

@@ -27,7 +27,7 @@ export const Component = styled.button`
 
   &.active {
     p {
-      color: rgba(250, 250, 250, 0.49);
+      color: rgba(250, 250, 250, 0.74);
     }
   }
 
