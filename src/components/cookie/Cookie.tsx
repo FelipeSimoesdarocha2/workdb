@@ -42,7 +42,7 @@ const ICookie = () => {
       <S.Container>
         <S.Typography>
           <p>{t('cookie.menu.typography.paragraph')}</p>
-          <Link href={'/privacy-policy'} draggable="false">
+          <Link href="/privacy-policy" draggable="false">
             {t('cookie.menu.typography.link')}
           </Link>
         </S.Typography>
@@ -53,7 +53,7 @@ const ICookie = () => {
           <button onClick={accept} className="acept">
             <p>{t('cookie.menu.actions.acept')}</p>
           </button>
-          <button onClick={() => setShowCookie(false)} className='exit'>
+          <button onClick={() => setShowCookie(false)} className="exit">
             <Image src={exit} alt="exit" />
           </button>
         </S.Actions>

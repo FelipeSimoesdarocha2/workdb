@@ -19,6 +19,24 @@ export const Container = styled.div`
   div::-webkit-scrollbar-thumb:hover {
     background: rgba(63, 67, 80, 0.32);
   }
+
+  .whatsapp {
+    position: absolute;
+    z-index: 998;
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .whatsapp:hover {
+    opacity: 0.8;
+    box-shadow: 0px 5px 5px 0px #cccccc;
+    border-radius: 50%;
+  }
+
+  .whatsapp:active {
+    transform: scale(0.8);
+    transition: all 250ms ease;
+  }
 `;
 
 export const Content = styled.div`

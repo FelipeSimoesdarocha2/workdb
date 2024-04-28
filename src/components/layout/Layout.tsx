@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 // Assets
 import logo from 'assets/components/logo.png';
+import whatsapp from 'assets/components/whatsapp.png';
 import workdatacloud from 'assets/components/workdatacloud.png';
 
 // Styles
@@ -32,7 +33,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
   return (
     <S.Container>
       <Header>
-        <Link title="ir para pagina inicial" href={'/'} draggable="false">
+        <Link title="ir para pagina inicial" href="/" draggable="false">
           <Image src={logo} alt="logo" draggable={'false'} />
         </Link>
         <Menu>
@@ -44,7 +45,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
           </Menu.ItemGroup>
         </Menu>
         <S.Actions>
-          <Link href={'https://www.workdatacloud.com'} title="Abrir link" draggable="false" target="_blank">
+          <Link href="https://www.workdatacloud.com" title="Abrir link" draggable="false" target="_blank">
             <Image src={workdatacloud} alt="workdatacloud" draggable={'false'} />
           </Link>
           <Internationalization />
@@ -52,6 +53,15 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
       </Header>
       <S.Content>{children}</S.Content>
       <Cookie />
+      <Link
+        title="Entrar em contato via whatsapp"
+        className="whatsapp"
+        target="_blank"
+        draggable="false"
+        href="https://wa.me/5547999536024?text=Ol%C3%A1%2C+vim+atrav%C3%A9s+site+WorkDB.+Queria+saber+mais+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+prestados+pela+WorkDB."
+      >
+        <Image src={whatsapp} alt="workdatacloud" draggable={'false'} />
+      </Link>
     </S.Container>
   );
 };
