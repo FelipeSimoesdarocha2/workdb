@@ -1,6 +1,3 @@
-// Next
-import { useRouter } from 'next/router';
-
 // React
 import { useState, useEffect, useCallback } from 'react';
 
@@ -14,9 +11,6 @@ export const useLayout = () => {
   const [isMenu, setIsMenu] = useState(false);
   const [isMidle, setIsMidle] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
-  const router = useRouter();
-  const { asPath } = useRouter();
 
   const t = useTranslations();
 
@@ -49,9 +43,7 @@ export const useLayout = () => {
 
   return {
     t,
-    router,
     isMenu,
-    asPath,
     isMidle,
     isMobile,
     sub_menus,

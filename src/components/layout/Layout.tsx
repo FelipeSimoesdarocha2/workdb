@@ -23,13 +23,7 @@ import { Menu } from 'components/menu';
 import { useLayout } from './useLayout';
 
 const Layout = ({ selectedKey, children }: LayoutProps) => {
-  const { t, router, asPath, isMenu, isMidle, isMobile, sub_menus, handleOpenMenu, linkAccess } = useLayout();
-
-  const handleMenuClick = (path: Url) => {
-    if (path !== asPath) {
-      router.push(path);
-    }
-  };
+  const { t, isMenu, isMidle, isMobile, sub_menus, handleOpenMenu, linkAccess } = useLayout();
 
   const isOpenMenu = (keys: string[]) => {
     return keys.includes(selectedKey ?? '');
@@ -38,39 +32,19 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
   return (
     <S.Container>
       <Header>
-        <Link title="ir para pagina inicial" href={'/'}>
+        <Link title="ir para pagina inicial" href={'/'} draggable="false">
           <Image src={logo} alt="logo" draggable={'false'} />
         </Link>
         <Menu>
           <Menu.ItemGroup>
-            <Menu.Item
-              menuItemKey="1"
-              name={`${t('Quem somos')}`}
-              defaultSelectedKeys={selectedKey}
-              onClick={() => handleMenuClick('/about')}
-            />
-            <Menu.Item
-              menuItemKey="2"
-              name={`${t('Soluções')}`}
-              defaultSelectedKeys={selectedKey}
-              onClick={() => handleMenuClick('/solutions')}
-            />
-            <Menu.Item
-              menuItemKey="8"
-              name={`${t('Trabalhe Conosco')}`}
-              defaultSelectedKeys={selectedKey}
-              onClick={() => handleMenuClick('/join-us')}
-            />
-            <Menu.Item
-              menuItemKey="9"
-              name={`${t('Contato')}`}
-              defaultSelectedKeys={selectedKey}
-              onClick={() => handleMenuClick('/contact')}
-            />
+            <Menu.Item menuItemKey="1" push={'/about'} name={t('Quem somos')} keye={selectedKey} />
+            <Menu.Item menuItemKey="2" push={'/solutions'} name={t('Soluções')} keye={selectedKey} />
+            <Menu.Item menuItemKey="8" push={'/join-us'} name={t('Trabalhe Conosco')} keye={selectedKey} />
+            <Menu.Item menuItemKey="9" push={'/contact'} name={t('Contato')} keye={selectedKey} />
           </Menu.ItemGroup>
         </Menu>
         <S.Actions>
-          <Link href={'https://www.workdatacloud.com'} title="Abrir link" passHref>
+          <Link href={'https://www.workdatacloud.com'} title="Abrir link" draggable="false">
             <Image src={workdatacloud} alt="workdatacloud" draggable={'false'} />
           </Link>
           <Internationalization />

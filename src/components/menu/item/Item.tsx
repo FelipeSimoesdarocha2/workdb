@@ -1,13 +1,18 @@
+// Next
+import Link from 'next/link';
+
 // Styles
 import * as S from './Item.styles';
 
 // Models
 import { MenuItemProps } from './models';
 
-const Item = ({ name, menuItemKey, defaultSelectedKeys, onClick }: MenuItemProps) => {
+const Item = ({ name, push, keye, menuItemKey }: MenuItemProps) => {
     return (
-        <S.Component onClick={onClick} className={`${defaultSelectedKeys === menuItemKey ? 'active' : null}`}>
-            <p>{name}</p>
+        <S.Component className={`${keye === menuItemKey ? 'active' : null}`}>
+            <Link href={push} draggable={false}>
+                {name}
+            </Link>
         </S.Component>
     );
 };
