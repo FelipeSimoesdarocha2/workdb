@@ -16,6 +16,7 @@ export const Component = styled.div`
     line-height: 1.15em;
     letter-spacing: 0.05em;
     transition: color 250ms;
+    white-space: nowrap;
   }
 
   a::selection {

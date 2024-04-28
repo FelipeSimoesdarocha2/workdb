@@ -15,10 +15,10 @@
         "privacy_policy": "Privacy Policy"
     },
     "menu": {
-        "about": "",
-        "contact": "",
-        "join_us": "",
-        "solutions": "",
+        "about": "About Us",
+        "contact": "Contact",
+        "join_us": "Join Us",
+        "solutions": "Solutions",
         "cloud": "",
         "data_engineering": "",
         "guardian": "",

@@ -37,14 +37,14 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
         </Link>
         <Menu>
           <Menu.ItemGroup>
-            <Menu.Item menuItemKey="1" push={'/about'} name={t('Quem somos')} keye={selectedKey} />
-            <Menu.Item menuItemKey="2" push={'/solutions'} name={t('Soluções')} keye={selectedKey} />
-            <Menu.Item menuItemKey="8" push={'/join-us'} name={t('Trabalhe Conosco')} keye={selectedKey} />
-            <Menu.Item menuItemKey="9" push={'/contact'} name={t('Contato')} keye={selectedKey} />
+            <Menu.Item menuItemKey="1" push={'/about'} name={`${t('menu.about')}`} keye={selectedKey} />
+            <Menu.Item menuItemKey="2" push={'/solutions'} name={t('menu.contact')} keye={selectedKey} />
+            <Menu.Item menuItemKey="8" push={'/join-us'} name={t('menu.join_us')} keye={selectedKey} />
+            <Menu.Item menuItemKey="9" push={'/contact'} name={t('menu.solutions')} keye={selectedKey} />
           </Menu.ItemGroup>
         </Menu>
         <S.Actions>
-          <Link href={'https://www.workdatacloud.com'} title="Abrir link" draggable="false">
+          <Link href={'https://www.workdatacloud.com'} title="Abrir link" draggable="false" target="_blank">
             <Image src={workdatacloud} alt="workdatacloud" draggable={'false'} />
           </Link>
           <Internationalization />
