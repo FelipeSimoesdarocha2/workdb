@@ -1,1 +1,27 @@
-{}
+{
+    "company": "WORKDB",
+    "pages": {
+        "home": "Home page",
+        "about": "About Us",
+        "contact": "Contact",
+        "join_us": "Join Us",
+        "solutions": "Solutions",
+        "cloud": "Cloud",
+        "data_engineering": "Data Engineering",
+        "guardian": "Guardian",
+        "infrastructure": "Infrastructure",
+        "software_factory": "Software Factory",
+        "not_found": "Not Found"
+    },
+    "menu": {
+        "about": "",
+        "contact": "",
+        "join_us": "",
+        "solutions": "",
+        "cloud": "",
+        "data_engineering": "",
+        "guardian": "",
+        "infrastructure": "",
+        "software_factory": ""
+    }
+}
