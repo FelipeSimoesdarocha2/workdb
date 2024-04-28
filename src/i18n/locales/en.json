@@ -11,7 +11,8 @@
         "guardian": "Guardian",
         "infrastructure": "Infrastructure",
         "software_factory": "Software Factory",
-        "not_found": "Not Found"
+        "not_found": "Not Found",
+        "privacy_policy": "Privacy Policy"
     },
     "menu": {
         "about": "",
@@ -23,5 +24,18 @@
         "guardian": "",
         "infrastructure": "",
         "software_factory": ""
+    },
+    "cookie": {
+        "menu": {
+            "typography": {
+                "paragraph": "We use cookies on our website to see how you interact with it. By accepting, you agree to the use of cookies.",
+                "link": "Privacy Policy"
+            },
+            "actions": {
+                "settings": "Settings",
+                "acept": "Acept"
+            }
+        },
+        "modal": ""
     }
 }

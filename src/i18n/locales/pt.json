@@ -11,7 +11,8 @@
         "guardian": "Guardião",
         "infrastructure": "Infraestrutura",
         "software_factory": "Fábrica de Software",
-        "not_found": "Não Encontrado"
+        "not_found": "Não Encontrado",
+        "privacy_policy": "Política de Privacidade"
     },
     "menu": {
         "about": "",
@@ -23,5 +24,18 @@
         "guardian": "",
         "infrastructure": "",
         "software_factory": ""
+    },
+    "cookie": {
+        "menu": {
+            "typography": {
+                "paragraph": "Usamos cookies no nosso site para ver como você interage com ele. Ao aceitar, você concorda com o uso de cookies.",
+                "link": "Política de Privacidade"
+            },
+            "actions": {
+                "settings": "Configurações",
+                "acept": "Aceitar"
+            }
+        },
+        "modal": ""
     }
 }

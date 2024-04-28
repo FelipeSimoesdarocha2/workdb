@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   background-color: var(--white);
+  position: relative;
 
   div::-webkit-scrollbar {
     width: 6px !important;

@@ -57,10 +57,6 @@ export const Value = styled.div`
 export const Label = styled.p`
   color: #141416;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 150%;
-  letter-spacing: -0.2px;
-  text-align: center;
   text-transform: uppercase;
 
   &::selection {

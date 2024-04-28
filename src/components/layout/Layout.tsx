@@ -14,6 +14,7 @@ import * as S from './Layout.styles';
 import { LayoutProps } from './models';
 
 // Components
+import { Cookie } from 'components/cookie';
 import { Header } from 'components/header';
 import { Internationalization } from 'components/internationalization';
 import { Menu } from 'components/menu';
@@ -76,6 +77,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
         </S.Actions>
       </Header>
       <S.Content>{children}</S.Content>
+      <Cookie />
     </S.Container>
   );
 };
