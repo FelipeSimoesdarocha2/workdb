@@ -13,18 +13,19 @@ export const Local = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-`;
-
-export const Inner = styled.div`
-  display: flex;
-  align-items: center;
 `;
 
 export const Typography = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 40px;
+`;
+
+export const Inner = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const Title = styled.div`
@@ -47,6 +48,23 @@ export const Title = styled.div`
 export const Paragraph = styled.div`
   display: flex;
   flex-direction: column;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  span h1 {
+    color: #105c86;
+    font-size: 24px;
+  }
+
+  span h2 {
+    color: #105c86;
+    font-size: 24px;
+    font-weight: 400;
+  }
 `;
 
 export const Maps = styled.div`

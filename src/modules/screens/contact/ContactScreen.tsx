@@ -26,7 +26,6 @@ const ContactScreen = () => {
                 <h1>ESTAMOS</h1>
               </S.Title>
             </S.Inner>
-
             <S.Paragraph>
               <span>
                 <h2>Conheça nossos</h2>
@@ -40,7 +39,6 @@ const ContactScreen = () => {
           </S.Typography>
           <Image src={map} alt="map" draggable={false} />
         </S.Wrapper>
-
         <S.Maps>
           <S.Map>
             <iframe
