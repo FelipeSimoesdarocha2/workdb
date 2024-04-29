@@ -4,12 +4,16 @@ import { useState, useEffect } from 'react';
 export const useHeader = () => {
     const [isActive, setIsActive] = useState(false);
 
-    const handleChangeBackground = () => {
-        setIsActive(window.scrollY >= 80);
+    const handleScroll = () => {
+        setIsActive(window.scrollY >= 8);
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', handleChangeBackground);
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return {

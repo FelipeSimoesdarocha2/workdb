@@ -15,6 +15,7 @@ import { LayoutProps } from './models';
 
 // Components
 import { Cookie } from 'components/cookie';
+import { Footer } from 'components/footer';
 import { Header } from 'components/header';
 import { Internationalization } from 'components/internationalization';
 import { Menu } from 'components/menu';
@@ -51,6 +52,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
         </S.Actions>
       </Header>
       <S.Content>{children}</S.Content>
+      <Footer />
       <Cookie />
       <Link
         title="entrar em contato via whatsapp"

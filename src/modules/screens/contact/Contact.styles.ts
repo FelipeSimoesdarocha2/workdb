@@ -8,9 +8,10 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: calc(10vw);
-  height: 662px;
+  padding: 104.5px 0;
   background-image: radial-gradient(
       circle at 94.35384114583333% 89.61588541666666%,
       #105c86 0%,
@@ -26,13 +27,22 @@ export const Content = styled.div`
     radial-gradient(circle at 6.165364583333333% 12.617187499999998%, #105c86 0%, 84.6%, rgba(16, 92, 134, 0) 100%),
     radial-gradient(circle at 93.6865234375% 11.42578125%, #2db6d4 0%, 42%, rgba(45, 182, 212, 0) 70%),
     radial-gradient(circle at 48.9013671875% 49.521484375%, #dbdbdb 0%, 100%, rgba(219, 219, 219, 0) 100%);
+
+  @media (max-width: 1101px) {
+    flex-direction: column;
+  }
 `;
 
 export const Outer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 60px;
+  gap: 55px;
+  margin-bottom: 100px;
+
+  @media (max-width: 1101px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const HyperText = styled.div`
@@ -48,7 +58,7 @@ export const HyperText = styled.div`
   h1 {
     font-size: 83px;
     color: rgb(0, 175, 211);
-    line-height: 0.9em;
+    line-height: 0.7em;
   }
 `;
 
@@ -77,14 +87,14 @@ export const Form = styled.div`
   max-width: 460px;
 `;
 
-export const Values = styled.button`
+export const Values = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
 `;
 
-export const Action = styled.button`
+export const Action = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -150,6 +160,11 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
+  @media (max-width: 1101px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 export const Typography = styled.div`
@@ -207,6 +222,10 @@ export const Maps = styled.div`
   align-items: center;
   justify-content: center;
   gap: 4rem;
+
+  @media (max-width: 1101px) {
+    flex-direction: column;
+  }
 `;
 
 export const Map = styled.div`

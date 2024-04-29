@@ -10,7 +10,7 @@ export const Component = styled.div`
   z-index: 100;
   height: 100px;
 
-  &.active {
+ &.active {
     visibility: hidden;
     opacity: 0;
     height: 0px;
