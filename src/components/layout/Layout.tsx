@@ -23,7 +23,7 @@ import { Menu } from 'components/menu';
 import { useLayout } from './useLayout';
 
 const Layout = ({ selectedKey, children }: LayoutProps) => {
-  const { t, isMenu, isMidle, isMobile, sub_menus, handleOpenMenu, linkAccess } = useLayout();
+  const { t, isMenu, isMidle, isMobile, sub_menus, linkAccess, handleOpenMenu } = useLayout();
 
   const isOpenMenu = (keys: string[]) => {
     return keys.includes(selectedKey ?? '');
