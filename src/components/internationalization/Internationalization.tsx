@@ -74,11 +74,11 @@ const Internationalization = () => {
       <S.Content>
         <S.Wrapper>
           <S.Value>
-            <Image src={flagSrc} alt="Flag" width={22} draggable={'false'} />
+            <Image src={flagSrc} alt="Flag" draggable={'false'} />
             <S.Label>{itens.find(e => e.value === languageSelected)?.label}</S.Label>
           </S.Value>
           <span className={`${isFocused ? 'focused-arrow' : null}`}>
-            <Image src={arrow} width={12} alt="arrow" draggable="false" />
+            <Image src={arrow} alt="arrow" draggable="false" />
           </span>
         </S.Wrapper>
         {openList && (

@@ -1,5 +1,4 @@
 // Next
-import { Url } from 'next/dist/shared/lib/router/router';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,18 +33,18 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
     <S.Container>
       <Header>
         <Link title="ir para pagina inicial" href="/" draggable="false">
-          <Image src={logo} alt="logo" draggable={'false'} />
+          <Image src={logo} alt="logo" draggable={'false'} priority />
         </Link>
         <Menu>
           <Menu.ItemGroup>
-            <Menu.Item menuItemKey="1" push={'/about'} name={`${t('menu.about')}`} keye={selectedKey} />
-            <Menu.Item menuItemKey="2" push={'/solutions'} name={t('menu.contact')} keye={selectedKey} />
-            <Menu.Item menuItemKey="8" push={'/join-us'} name={t('menu.join_us')} keye={selectedKey} />
-            <Menu.Item menuItemKey="9" push={'/contact'} name={t('menu.solutions')} keye={selectedKey} />
+            <Menu.Item menuItemKey="1" push="/about" name={t('menu.about')} keye={selectedKey} />
+            <Menu.Item menuItemKey="2" push="/solutions" name={t('menu.solutions')} keye={selectedKey} />
+            <Menu.Item menuItemKey="8" push="/join-us" name={t('menu.join_us')} keye={selectedKey} />
+            <Menu.Item menuItemKey="9" push="/contact" name={t('menu.contact')} keye={selectedKey} />
           </Menu.ItemGroup>
         </Menu>
         <S.Actions>
-          <Link href="https://www.workdatacloud.com" title="Abrir link" draggable="false" target="_blank">
+          <Link href="https://www.workdatacloud.com" title="abrir link" draggable="false" target="_blank">
             <Image src={workdatacloud} alt="workdatacloud" draggable={'false'} />
           </Link>
           <Internationalization />
@@ -54,7 +53,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
       <S.Content>{children}</S.Content>
       <Cookie />
       <Link
-        title="Entrar em contato via whatsapp"
+        title="entrar em contato via whatsapp"
         className="whatsapp"
         target="_blank"
         draggable="false"

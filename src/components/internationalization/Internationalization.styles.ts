@@ -42,6 +42,10 @@ export const Wrapper = styled.div`
     transition: all 500ms;
   }
 
+  span img {
+    width: 12px;
+  }
+
   .focused-arrow {
     transform: rotate(-180deg);
     transition: 500ms;
@@ -52,6 +56,10 @@ export const Value = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+
+  img {
+    width: 22px;
+  }
 `;
 
 export const Label = styled.p`
