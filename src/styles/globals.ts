@@ -3,29 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 const Global = createGlobalStyle`
 
 :root {
-/* COLORS */
---black-primary: rgba(0, 0, 0, 0.8);
-
-  /* GRADIENT COLOR */
-
-/* TYPOGRAPHY */
-
-/* text */
-
-/* line-height */
-
-/* letter-spacing */
-
-/* SPACING */
-
-/* SHADOW */
-
-/* BORDER RADIUS */
-
-/* TRANSITION */
---transition-1: 250ms ease;
---transition-2: 500ms ease;
---transition-3: 1000ms ease;
 }
 
 /* #RESET */
@@ -103,7 +80,7 @@ text-decoration: none;
 body {
 font-size: var(--fontSize-body-4);
 line-height: var(--lineHeight-5);
-font-family: "Quicksand", sans-serif;
+font-family: "poppins-semibold", "poppins", sans-serif;
 }
 
 @media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 1.5dppx) {
@@ -111,22 +88,6 @@ font-family: "Quicksand", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-}
-
-@media (min-width: 1100px) {
-:root {
-}
-}
-
-@media (min-width: 991px) {
-:root {
-  --section-space: 100px;
-}
-}
-
-@media (min-width: 560px) {
-:root {
-}
 }
 `;
 

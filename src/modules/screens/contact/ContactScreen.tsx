@@ -16,6 +16,21 @@ const ContactScreen = () => {
 
   return (
     <S.Container>
+      <S.Content>
+        <S.Outer>
+          <S.HyperText>
+            <h2>ENTRE EM</h2>
+            <h1>CONTATO</h1>
+          </S.HyperText>
+          <S.SubTitle>
+            <h1>
+              Fale conosco através do <text>formulário</text> ou via <text>Whatsapp</text> no canto inferior direito.
+            </h1>
+          </S.SubTitle>
+        </S.Outer>
+        <S.Form></S.Form>
+      </S.Content>
+
       <S.Local>
         <S.Wrapper>
           <S.Typography>

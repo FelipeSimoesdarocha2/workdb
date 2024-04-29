@@ -6,6 +6,9 @@ import { useRouter } from 'next/router';
 // Translate
 import '../i18n';
 
+// Font
+import '../../public/fonts/Poppins.css';
+
 // React
 import { useState, useEffect } from 'react';
 
