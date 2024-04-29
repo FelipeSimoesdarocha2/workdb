@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;
   justify-content: center;
-  gap: 150px;
+  gap: calc(10vw);
   height: 662px;
   background-image: radial-gradient(
       circle at 94.35384114583333% 89.61588541666666%,
@@ -84,6 +84,12 @@ export const Values = styled.button`
   width: 100%;
 `;
 
+export const Action = styled.button`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+`;
+
 export const Button = styled.button`
   display: flex;
   align-items: center;
@@ -108,7 +114,7 @@ export const Button = styled.button`
 
   &:disabled {
     cursor: not-allowed;
-    background-color: #e0e0e0;
+    /* background-color: #e0e0e0; */
   }
 
   &:disabled:active {
@@ -120,7 +126,7 @@ export const Button = styled.button`
   }
 
   &:disabled p {
-    color: #a6a6a6;
+    /* color: #a6a6a6; */
   }
 
   p {

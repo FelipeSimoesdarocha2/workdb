@@ -53,10 +53,7 @@ export const useContact = () => {
   };
 
   const validationSchema = yup.object().shape({
-    email: yup
-      .string()
-      .email(`${t('email-invalid')}`)
-      .required(`${t('email-required')}`),
+    email: yup.string().email('email-invalid').required('email-required'),
   });
 
   const formik = useFormik({

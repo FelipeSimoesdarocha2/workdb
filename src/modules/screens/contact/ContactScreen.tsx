@@ -13,6 +13,7 @@ import { FormikProvider } from 'formik';
 
 // Components
 import { Input } from 'components/input';
+import { Textarea } from 'components/textarea';
 
 // Hook
 import { useContact } from './useContact';
@@ -87,16 +88,29 @@ const ContactScreen = () => {
                 onBlur={formik.handleBlur('company')}
                 onChange={formik.handleChange('company')}
               />
+              <Textarea
+                id="mensage"
+                key="mensage"
+                title="Mensagem"
+                placeholder=""
+                data-testid="mensage"
+                autocomplete="mensage"
+                value={formik.values.mensage}
+                onBlur={formik.handleBlur('mensage')}
+                onChange={formik.handleChange('mensage')}
+              />
             </S.Values>
-            <S.Button onClick={onSubmit} disabled={disabled}>
-              {loading ? (
-                <p>carregando</p>
-              ) : (
-                <>
-                  <p>Enviar</p>
-                </>
-              )}
-            </S.Button>
+            <S.Action>
+              <S.Button onClick={onSubmit} disabled={disabled}>
+                {loading ? (
+                  <p>carregando</p>
+                ) : (
+                  <>
+                    <p>Enviar</p>
+                  </>
+                )}
+              </S.Button>
+            </S.Action>
           </FormikProvider>
         </S.Form>
       </S.Content>
@@ -121,7 +135,7 @@ const ContactScreen = () => {
               </span>
             </S.Paragraph>
           </S.Typography>
-          <Image src={map} alt="map" draggable={false} />
+          <Image src={map} alt="map" draggable={false} priority />
         </S.Wrapper>
         <S.Maps>
           <S.Map>
