@@ -8,11 +8,17 @@ import map from 'assets/pages/contact/map.webp';
 // Styles
 import * as S from './Contact.styles';
 
-// i18n
-import useTranslations from 'i18n';
+// Formik
+import { FormikProvider } from 'formik';
+
+// Components
+import { Input } from 'components/input';
+
+// Hook
+import { useContact } from './useContact';
 
 const ContactScreen = () => {
-  const t = useTranslations();
+  const { t, formik, loading, disabled, onSubmit } = useContact();
 
   return (
     <S.Container>
@@ -28,16 +34,79 @@ const ContactScreen = () => {
             </h1>
           </S.SubTitle>
         </S.Outer>
-        <S.Form></S.Form>
+        <S.Form>
+          <FormikProvider value={formik}>
+            <S.Values>
+              <Input
+                id="name"
+                key="name"
+                type="text"
+                title="Nome"
+                placeholder=""
+                required={true}
+                data-testid="name"
+                autocomplete="name"
+                value={formik.values.name}
+                onBlur={formik.handleBlur('name')}
+                onChange={formik.handleChange('name')}
+              />
+              <Input
+                id="phone"
+                key="phone"
+                type="tel"
+                title="Telefone"
+                placeholder=""
+                data-testid="phone"
+                autocomplete="phone"
+                value={formik.values.phone}
+                onBlur={formik.handleBlur('phone')}
+                onChange={formik.handleChange('phone')}
+              />
+              <Input
+                id="email"
+                key="email"
+                type="text"
+                title="Email"
+                placeholder=""
+                required={true}
+                data-testid="email"
+                autocomplete="email"
+                value={formik.values.email}
+                onBlur={formik.handleBlur('email')}
+                onChange={formik.handleChange('email')}
+              />
+              <Input
+                id="company"
+                key="company"
+                type="text"
+                title="Empresa"
+                placeholder=""
+                data-testid="company"
+                autocomplete="company"
+                value={formik.values.company}
+                onBlur={formik.handleBlur('company')}
+                onChange={formik.handleChange('company')}
+              />
+            </S.Values>
+            <S.Button onClick={onSubmit} disabled={disabled}>
+              {loading ? (
+                <p>carregando</p>
+              ) : (
+                <>
+                  <p>Enviar</p>
+                </>
+              )}
+            </S.Button>
+          </FormikProvider>
+        </S.Form>
       </S.Content>
-
       <S.Local>
         <S.Wrapper>
           <S.Typography>
             <S.Inner>
               <Image src={local} alt="local" draggable={false} />
               <S.Title>
-                <h2>onde</h2>
+                <h2>ONDE</h2>
                 <h1>ESTAMOS</h1>
               </S.Title>
             </S.Inner>

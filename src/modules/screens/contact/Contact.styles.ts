@@ -9,7 +9,8 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 150px;
+  height: 662px;
   background-image: radial-gradient(
       circle at 94.35384114583333% 89.61588541666666%,
       #105c86 0%,
@@ -66,7 +67,71 @@ export const SubTitle = styled.div`
   }
 `;
 
-export const Form = styled.div``;
+export const Form = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 460px;
+`;
+
+export const Values = styled.button`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+`;
+
+export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 36px;
+  background-color: rgba(0, 181, 219, 1);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(16, 92, 134, 1);
+    transition: background-color 0.3s ease;
+    box-shadow: none;
+  }
+
+  &:active {
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #e0e0e0;
+  }
+
+  &:disabled:active {
+    transform: scale(1);
+  }
+
+  &:not(&:disabled) {
+    background-color: rgba(0, 181, 219, 1);
+  }
+
+  &:disabled p {
+    color: #a6a6a6;
+  }
+
+  p {
+    color: rgba(250, 250, 250);
+    font-size: 18px;
+  }
+
+  p::selection {
+    background: none;
+  }
+`;
 
 export const Local = styled.div`
   display: flex;
@@ -99,13 +164,13 @@ export const Title = styled.div`
   h2 {
     color: rgb(16, 92, 134);
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   h1 {
     font-size: 83px;
     color: rgb(0, 175, 211);
-    line-height: 0.9em;
+    line-height: 0.7em;
   }
 `;
 
@@ -156,5 +221,6 @@ export const Map = styled.div`
   h1 {
     color: #105c86;
     font-size: 24px;
+    font-weight: 600;
   }
 `;
