@@ -42,7 +42,6 @@ export const Container = styled.div`
 export const Content = styled.div`
   width: 100%;
   height: 100%;
-  overflow: auto;
 `;
 
 export const Actions = styled.div`
