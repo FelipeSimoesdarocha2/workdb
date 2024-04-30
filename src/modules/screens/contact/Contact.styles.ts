@@ -154,6 +154,7 @@ export const Local = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 60px;
+  margin-bottom: 100px;
 `;
 
 export const Wrapper = styled.div`

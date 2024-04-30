@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
   background-color: var(--white);
   position: relative;
 
@@ -21,7 +20,7 @@ export const Container = styled.div`
   }
 
   .whatsapp {
-    position: absolute;
+    position: fixed;
     z-index: 998;
     bottom: 30px;
     right: 30px;
