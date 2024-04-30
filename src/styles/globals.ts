@@ -83,11 +83,24 @@ line-height: var(--lineHeight-5);
 font-family: "poppins-semibold", "poppins", sans-serif;
 }
 
+::-webkit-scrollbar {
+width: 6px !important;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 3px;
+background: rgba(63, 67, 80, 0.24);
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: rgba(63, 67, 80, 0.32);
+}
+
 @media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 1.5dppx) {
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+body {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
 }
 `;
 

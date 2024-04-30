@@ -7,9 +7,8 @@ export const Component = styled.div`
   position: fixed;
   width: 100%;
   height: 100px;
-  background-color: #235c88;
+  background-color: rgba(16, 92, 134, 1);
   border-right: 1px solid #e9ebf1;
-  box-shadow: 0px 8px 10px 3px #0000001a;
   z-index: 100;
   transition: all 500ms ease-out;
 
@@ -20,8 +19,8 @@ export const Component = styled.div`
     transition: all 750ms;
 
     > div {
-      filter: blur(2rem);
-      transition: all 1s;
+      filter: blur(1rem);
+      transition: all 250ms;
     }
   }
 `;

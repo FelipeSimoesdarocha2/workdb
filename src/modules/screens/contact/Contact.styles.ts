@@ -11,7 +11,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   gap: calc(10vw);
-  padding: 104.5px 0;
+  padding: 204.5px 0 104.5px;
   background-image: radial-gradient(
       circle at 94.35384114583333% 89.61588541666666%,
       #105c86 0%,
@@ -20,7 +20,7 @@ export const Content = styled.div`
     ),
     radial-gradient(
       circle at 6.503906249999999% 88.037109375%,
-      rgba(0, 175, 211, 0.99) 0%,
+      rgba(0, 160, 211, 0.99) 0%,
       20.950000000000003%,
       rgba(0, 175, 211, 0) 50%
     ),
@@ -65,15 +65,15 @@ export const HyperText = styled.div`
 export const SubTitle = styled.div`
   width: 100%;
   max-width: 462px;
-
   h1 {
     color: #fff;
     font-size: 24px;
     font-weight: 200;
   }
 
-  text {
+  span {
     font-weight: 500;
+    display: inline-block;
   }
 `;
 
@@ -191,7 +191,7 @@ export const Title = styled.div`
 
   h1 {
     font-size: 83px;
-    color: rgb(0, 175, 211);
+    color: rgb(0, 160, 211);
     line-height: 0.7em;
   }
 `;
@@ -248,5 +248,6 @@ export const Map = styled.div`
     color: #105c86;
     font-size: 24px;
     font-weight: 600;
+    text-transform: uppercase;
   }
 `;

@@ -83,7 +83,7 @@ export const Inner = styled.div`
   padding: 0 12px;
   background: #ffffff;
   border-radius: 0px 0px 10px 10px;
-  box-shadow: 0px 5px 5px 0px #cccccc;
+  box-shadow: 0px 5px 10px 0px #00000040;
 
   &:hover {
     background: rgba(219, 219, 219);
