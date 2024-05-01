@@ -41,8 +41,8 @@ const ContactScreen = () => {
       <S.Content>
         <S.Outer>
           <S.HyperText>
-            <h2>ENTRE EM</h2>
-            <h1>CONTATO</h1>
+            <h2>{t('contact.title')}</h2>
+            <h1>{t('contact.sub_title')}</h1>
           </S.HyperText>
           <S.SubTitle>
             <h1>
@@ -57,7 +57,7 @@ const ContactScreen = () => {
                 id="name"
                 key="name"
                 type="text"
-                title="Nome"
+                title={t('contact.form.name')}
                 placeholder=""
                 required={true}
                 data-testid="name"
@@ -70,7 +70,7 @@ const ContactScreen = () => {
                 id="phone"
                 key="phone"
                 type="tel"
-                title="Telefone"
+                title={t('contact.form.phone')}
                 placeholder=""
                 data-testid="phone"
                 autocomplete="phone"
@@ -82,7 +82,7 @@ const ContactScreen = () => {
                 id="email"
                 key="email"
                 type="text"
-                title="Email"
+                title={t('contact.form.email')}
                 placeholder=""
                 required={true}
                 data-testid="email"
@@ -95,7 +95,7 @@ const ContactScreen = () => {
                 id="company"
                 key="company"
                 type="text"
-                title="Empresa"
+                title={t('contact.form.company')}
                 placeholder=""
                 data-testid="company"
                 autocomplete="company"
@@ -106,7 +106,7 @@ const ContactScreen = () => {
               <Textarea
                 id="mensage"
                 key="mensage"
-                title="Mensagem"
+                title={t('contact.form.mensage')}
                 placeholder=""
                 data-testid="mensage"
                 autocomplete="mensage"

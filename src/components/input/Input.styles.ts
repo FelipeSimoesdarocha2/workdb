@@ -17,6 +17,7 @@ export const Component = styled.div`
     font-weight: 400;
     line-height: 12px;
     letter-spacing: 0.15px;
+    text-transform: capitalize;
 
     &.required::after {
       content: ' *';

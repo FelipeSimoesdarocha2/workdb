@@ -53,12 +53,14 @@ export const HyperText = styled.div`
     color: #fff;
     font-size: 28px;
     font-weight: 400;
+    text-transform: uppercase;
   }
 
   h1 {
     font-size: 83px;
     color: rgb(0, 175, 211);
     line-height: 0.7em;
+    text-transform: uppercase;
   }
 `;
 

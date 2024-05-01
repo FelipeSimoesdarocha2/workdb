@@ -24,7 +24,7 @@ export const Component = styled.div`
   }
 
   &.active {
-    p {
+    a {
       color: rgba(250, 250, 250, 0.74);
     }
   }

@@ -9,7 +9,7 @@ import { MenuItemProps } from './models';
 
 const Item = ({ name, push, keye, menuItemKey }: MenuItemProps) => {
     return (
-        <S.Component className={`${keye === menuItemKey ? 'active' : null}`}>
+        <S.Component className={`${keye === menuItemKey ? 'active' : ''}`}>
             <Link href={push} draggable={false}>
                 {name}
             </Link>
