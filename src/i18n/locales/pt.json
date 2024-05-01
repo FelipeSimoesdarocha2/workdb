@@ -6,7 +6,7 @@
         "contact": "Contato",
         "join_us": "Trabalhe Conosco",
         "solutions": "Soluções",
-        "cloud": "Nuvem",
+        "cloud": "Cloud",
         "data_engineering": "Engenharia de Dados",
         "guardian": "Guardião",
         "infrastructure": "Infraestrutura",
@@ -15,15 +15,19 @@
         "privacy_policy": "Política de Privacidade"
     },
     "menu": {
-        "about": "Quem Somos",
-        "contact": "Contato",
-        "join_us": "Trabalhe Conosco",
-        "solutions": "Soluções",
-        "cloud": "",
-        "data_engineering": "",
-        "guardian": "",
-        "infrastructure": "",
-        "software_factory": ""
+        "home": "página Inicial",
+        "about": "quem somos",
+        "contact": "contato",
+        "join_us": "trabalhe conosco",
+        "people_management": "gestão de pessoas",
+        "solutions": "soluções",
+        "cloud": "cloud",
+        "data_engineering": "engenharia de dados",
+        "guardian": "guardião",
+        "infrastructure": "infraestrutura",
+        "software_factory": "fábrica de software ",
+        "not_found": "não encontrado",
+        "privacy_policy": "política de privacidade"
     },
     "cookie": {
         "menu": {
@@ -38,10 +42,30 @@
         },
         "modal": ""
     },
+    "country": {
+        "brazil": "brasil",
+        "mexico": "méxico",
+        "germany": "alemanha"
+    },
+    "accessibility": {
+        "go": "ir para"
+    },
+    "footer": {
+        "speak": "fale",
+        "with_us": "conosco",
+        "talk_specialist": "fale com um especialista",
+        "offices": "offices"
+    },
     "contact": {
         "title": "entre em",
         "sub_title": "contato",
-        "paragraph": {},
+        "paragraph": {
+            "h1_p1": "Fale conosco através do ",
+            "span_p1": "formulário ",
+            "h1_p2": " ou via ",
+            "span_p2": "Whatsapp ",
+            "h1_p3": "no canto inferior direito. "
+        },
         "form": {
             "name": "nome",
             "phone": "telefone",
@@ -51,9 +75,14 @@
             "send": "enviar"
         },
         "local": {
-            "title": "",
-            "sub_title": "",
-            "paragraph": {}
+            "title": "onde",
+            "sub_title": "estamos",
+            "paragraph": {
+                "p_p1": "Conheça  nossos ",
+                "span_p1": "escritórios",
+                "p_p2": "Estamos por ",
+                "span_p2": "toda parte!"
+            }
         }
     }
 }

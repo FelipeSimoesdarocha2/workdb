@@ -15,8 +15,10 @@ export const Component = styled.div`
 export const Content = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 2rem;
+  width: 100%;
+
 
   @media (max-width: 750px) {
     flex-direction: column;
@@ -46,13 +48,22 @@ export const Col = styled.div`
   display: flex;
   flex-direction: column;
 
-  p {
+  a {
     color: #dbdbdb;
     font-size: 15px;
+    text-transform: capitalize;
   }
 
+  a:hover {
+    color: #fff;
+    transition:
+      all 0.2s ease,
+      visibility;
+  }
+
+
   @media (max-width: 750px) {
-    p {
+    a {
       text-align: center;
     }
   }
@@ -80,7 +91,7 @@ export const Network = styled.div`
 
 export const About = styled.div`
   display: flex;
-  gap: 2rem;
+  gap: 40px;
   flex-wrap: wrap;
 
   @media (max-width: 750px) {
@@ -138,6 +149,7 @@ export const Action = styled.div`
     color: #fff;
     font-size: 18px;
     font-weight: 500;
+    text-transform: uppercase;
   }
 `;
 
@@ -155,7 +167,7 @@ export const Local = styled.div`
     align-items: center;
   }
 
-  p {
+  a:first-child p {
     color: #dbdbdb;
     font-size: 15px;
     font-weight: 600;
@@ -165,10 +177,13 @@ export const Local = styled.div`
   }
 
   a p {
+    color: #dbdbdb;
+    font-size: 15px;
     font-weight: 400;
     transition:
       all 0.2s ease,
       visibility;
+      text-transform: capitalize;
   }
 
   a p:hover {
@@ -197,6 +212,7 @@ export const Links = styled.div`
     transition:
       all 0.2s ease,
       visibility;
+      text-transform: capitalize;
   }
 
   a:hover {

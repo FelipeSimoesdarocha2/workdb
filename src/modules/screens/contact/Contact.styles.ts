@@ -10,7 +10,7 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: calc(10vw);
+  gap: calc(9vw);
   padding: 204.5px 0 104.5px;
   background-image: radial-gradient(
       circle at 94.35384114583333% 89.61588541666666%,
@@ -37,7 +37,7 @@ export const Outer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 55px;
+  gap: 65px;
   margin-bottom: 100px;
 
   @media (max-width: 1101px) {
@@ -67,10 +67,12 @@ export const HyperText = styled.div`
 export const SubTitle = styled.div`
   width: 100%;
   max-width: 462px;
+
   h1 {
     color: #fff;
     font-size: 24px;
     font-weight: 200;
+    line-height: 1.3em;
   }
 
   span {
@@ -144,6 +146,7 @@ export const Button = styled.button`
   p {
     color: rgba(250, 250, 250);
     font-size: 18px;
+    text-transform: capitalize;
   }
 
   p::selection {
@@ -189,34 +192,30 @@ export const Title = styled.div`
     color: rgb(16, 92, 134);
     font-size: 28px;
     font-weight: 400;
+    text-transform: uppercase;
   }
 
   h1 {
     font-size: 83px;
     color: rgb(0, 160, 211);
     line-height: 0.7em;
+    text-transform: uppercase;
   }
 `;
 
 export const Paragraph = styled.div`
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  max-width: 462px;
+
+  p {
+    color: #105c86;
+    font-size: 24px;
+    font-weight: 200;
+  }
 
   span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  span h1 {
-    color: #105c86;
-    font-size: 24px;
-  }
-
-  span h2 {
-    color: #105c86;
-    font-size: 24px;
-    font-weight: 400;
+    font-weight: 600;
+    display: inline-block;
   }
 `;
 

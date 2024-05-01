@@ -2,9 +2,9 @@
     "company": "WORKDB",
     "pages": {
         "home": "Home page",
-        "about": "About Us",
+        "about": "Who we are",
         "contact": "Contact",
-        "join_us": "Join Us",
+        "join_us": "Work with us",
         "solutions": "Solutions",
         "cloud": "Cloud",
         "data_engineering": "Data Engineering",
@@ -15,15 +15,19 @@
         "privacy_policy": "Privacy Policy"
     },
     "menu": {
-        "about": "About Us",
-        "contact": "Contact",
-        "join_us": "Join Us",
-        "solutions": "Solutions",
-        "cloud": "",
-        "data_engineering": "",
-        "guardian": "",
-        "infrastructure": "",
-        "software_factory": ""
+        "home": "home page",
+        "about": "who we are",
+        "contact": "contact",
+        "join_us": "work with us",
+        "people_management": "people management",
+        "solutions": "solutions",
+        "cloud": "cloud",
+        "data_engineering": "data engineering",
+        "guardian": "guardian",
+        "infrastructure": "infrastructure",
+        "software_factory": "software factory",
+        "not_found": "not found",
+        "privacy_policy": "privacy policy"
     },
     "cookie": {
         "menu": {
@@ -38,22 +42,47 @@
         },
         "modal": ""
     },
+    "country": {
+        "brazil": "brazil",
+        "mexico": "mexico",
+        "germany": "germany"
+    },
+    "accessibility": {
+        "go": "go to"
+    },
+    "footer": {
+        "speak": "talk",
+        "with_us": "with us",
+        "talk_specialist": "talk to an expert",
+        "offices": "escritórios"
+    },
     "contact": {
-        "title": "Get in ",
-        "sub_title": "touch",
-        "paragraph": {},
+        "title": "get in",
+        "sub_title": "contact",
+        "paragraph": {
+            "h1_p1": "Contact us using the",
+            "span_p1": "form",
+            "h1_p2": "or via",
+            "span_p2": "Whatsapp ",
+            "h1_p3": "in the bottom right corner."
+        },
         "form": {
             "name": "name",
-            "phone": "phone",
+            "phone": "telephone",
             "email": "email",
             "company": "company",
             "mensage": "mensage",
             "send": "send"
         },
         "local": {
-            "title": "",
-            "sub_title": "",
-            "paragraph": {}
+            "title": "where",
+            "sub_title": "we are",
+            "paragraph": {
+                "p_p1": "Get to know our ",
+                "span_p1": "offices",
+                "p_p2": "We're ",
+                "span_p2": "everywhere!"
+            }
         }
     }
 }

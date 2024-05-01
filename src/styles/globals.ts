@@ -77,6 +77,28 @@ blockquote {
 text-decoration: none;
 }
 
+a[title]:hover:after {
+    content: attr(title);
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 9999;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+a[title] {
+    position: relative;
+}
+
+a[title]:hover {
+    text-decoration: none;
+}
+
 body {
 font-size: var(--fontSize-body-4);
 line-height: var(--lineHeight-5);
