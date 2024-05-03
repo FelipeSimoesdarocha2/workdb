@@ -19,7 +19,6 @@ export const Content = styled.div`
   gap: 2rem;
   width: 100%;
 
-
   @media (max-width: 750px) {
     flex-direction: column;
   }
@@ -52,6 +51,7 @@ export const Col = styled.div`
     color: #dbdbdb;
     font-size: 15px;
     text-transform: capitalize;
+    line-height: 1.5em;
   }
 
   a:hover {
@@ -60,7 +60,6 @@ export const Col = styled.div`
       all 0.2s ease,
       visibility;
   }
-
 
   @media (max-width: 750px) {
     a {
@@ -138,6 +137,10 @@ export const Action = styled.div`
     all 0.2s ease,
     visibility;
 
+  ::selection {
+    background: none;
+  }
+
   &:hover {
     background: rgb(0, 175, 211);
     transition:
@@ -183,7 +186,7 @@ export const Local = styled.div`
     transition:
       all 0.2s ease,
       visibility;
-      text-transform: capitalize;
+    text-transform: capitalize;
   }
 
   a p:hover {
@@ -212,7 +215,7 @@ export const Links = styled.div`
     transition:
       all 0.2s ease,
       visibility;
-      text-transform: capitalize;
+    text-transform: capitalize;
   }
 
   a:hover {

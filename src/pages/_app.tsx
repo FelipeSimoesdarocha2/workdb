@@ -8,6 +8,8 @@ import '../i18n';
 
 // Font
 import '../../public/fonts/Poppins.css';
+import '../../public/fonts/OpenSans.css';
+import '../../public/fonts/Oswald.css';
 
 // React
 import { useState, useEffect } from 'react';

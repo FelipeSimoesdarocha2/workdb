@@ -7,9 +7,9 @@ import { useRouter } from 'next/router';
 import React, { useState, useRef, useEffect } from 'react';
 
 // Assets
-import pt from './icons/br.png';
-import en from './icons/en.png';
-import arrow from 'assets/components/arrow.svg';
+import arrow from 'assets/icons/arrow.svg';
+import pt from 'assets/icons/br.png';
+import en from 'assets/icons/en.png';
 
 // Styles
 import * as S from './Internationalization.styles';
@@ -74,7 +74,7 @@ const Internationalization = () => {
       <S.Content>
         <S.Wrapper>
           <S.Value>
-            <Image src={flagSrc} alt="Flag" draggable={'false'} />
+            <Image src={flagSrc} alt="Flag" draggable="false" />
             <S.Label>{itens.find(e => e.value === languageSelected)?.label}</S.Label>
           </S.Value>
           <span className={`${isFocused ? 'focused-arrow' : null}`}>
@@ -92,7 +92,7 @@ const Internationalization = () => {
                     onClick={() => handleOptionClick(option.value)}
                     className={`${selectedOption === option.label ? `${'selected'}` : null}`}
                   >
-                    <Image src={option.value === 'en' ? en : pt} alt="Flag" width={22} draggable={'false'} />
+                    <Image src={option.value === 'en' ? en : pt} alt="Flag" width={22} draggable="false" />
                     <S.Label>{option.label}</S.Label>
                   </S.Item>
                 ))}

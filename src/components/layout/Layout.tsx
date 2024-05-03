@@ -24,7 +24,7 @@ import { Menu } from 'components/menu';
 import { useLayout } from './useLayout';
 
 const Layout = ({ selectedKey, children }: LayoutProps) => {
-  const { t, isMenu, isMidle, isMobile, sub_menus, linkAccess, handleOpenMenu } = useLayout();
+  const { t, isMenu, isMidle, isMobile, sub_menus, handleOpenMenu } = useLayout();
 
   const isOpenMenu = (keys: string[]) => {
     return keys.includes(selectedKey ?? '');
@@ -34,7 +34,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
     <S.Container>
       <Header>
         <Link title="ir para pagina inicial" href="/" draggable="false">
-          <Image src={logo} alt="logo" draggable={'false'} priority />
+          <Image src={logo} alt="logo" draggable="false" />
         </Link>
         <Menu>
           <Menu.ItemGroup>
@@ -46,7 +46,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
         </Menu>
         <S.Actions>
           <Link href="https://www.workdatacloud.com" title="abrir link" draggable="false" target="_blank">
-            <Image src={workdatacloud} alt="workdatacloud" draggable={'false'} />
+            <Image src={workdatacloud} alt="workdatacloud" draggable="false" />
           </Link>
           <Internationalization />
         </S.Actions>
@@ -61,7 +61,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
         draggable="false"
         href="https://wa.me/5547999536024?text=Ol%C3%A1%2C+vim+atrav%C3%A9s+site+WorkDB.+Queria+saber+mais+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+prestados+pela+WorkDB."
       >
-        <Image src={whatsapp} alt="workdatacloud" draggable={'false'} />
+        <Image src={whatsapp} alt="workdatacloud" draggable="false" />
       </Link>
     </S.Container>
   );

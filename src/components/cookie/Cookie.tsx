@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 // Assets
-import exit from 'assets/components/exit.svg';
+import exit from 'assets/icons/exit.svg';
 
 // Styles
 import * as S from './Cookie.styles';

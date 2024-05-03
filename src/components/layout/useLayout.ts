@@ -18,11 +18,6 @@ export const useLayout = () => {
     setIsMenu(!isMenu);
   };
 
-  const linkAccess = (url: string) => {
-    const externalUrl = url;
-    window.location.href = externalUrl;
-  };
-
   const handleResize = useCallback(() => {
     setIsMidle(window.innerWidth < 1101 ?? false);
     setIsMobile(window.innerWidth < 560 ?? false);
@@ -47,7 +42,6 @@ export const useLayout = () => {
     isMidle,
     isMobile,
     sub_menus,
-    linkAccess,
     handleOpenMenu,
   };
 };

@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 // Assets
 import chat from 'assets/components/chat.png';
-import instagram from 'assets/components/instagram.png';
-import linkedin from 'assets/components/linkedin.webp';
 import logo from 'assets/components/logo.png';
-import youtube from 'assets/components/youtube.png';
+import instagram from 'assets/icons/instagram.svg';
+import linkedin from 'assets/icons/linkedin.svg';
+import youtube from 'assets/icons/youtube.svg';
 
 // Styles
 import * as S from './Footer.styles';
@@ -24,7 +24,7 @@ const Footer = () => {
                 <S.Wrraper>
                     <S.Social>
                         <Link title="ir para pagina inicial" href="/" draggable="false">
-                            <Image src={logo} alt="logo" draggable={'false'} priority />
+                            <Image src={logo} alt="logo" draggable="false" priority />
                         </Link>
                         <S.Network>
                             <Link
@@ -33,7 +33,7 @@ const Footer = () => {
                                 draggable="false"
                                 href="https://br.linkedin.com/company/workdbdatabusiness"
                             >
-                                <Image src={linkedin} alt="logo" draggable={'false'} />
+                                <Image src={linkedin} alt="logo" draggable="false" />
                             </Link>
                             <Link
                                 title="instagram"
@@ -41,7 +41,7 @@ const Footer = () => {
                                 draggable="false"
                                 href="https://www.instagram.com/workdbdatabusiness?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
                             >
-                                <Image src={instagram} alt="logo" draggable={'false'} />
+                                <Image src={instagram} alt="logo" draggable="false" />
                             </Link>
                             <Link
                                 title="youtube"
@@ -49,7 +49,7 @@ const Footer = () => {
                                 draggable="false"
                                 href="https://www.youtube.com/@workdbdatabusiness6213/featured"
                             >
-                                <Image src={youtube} alt="logo" draggable={'false'} />
+                                <Image src={youtube} alt="logo" draggable="false" />
                             </Link>
                         </S.Network>
                     </S.Social>
@@ -118,7 +118,7 @@ const Footer = () => {
                                 <h2>{t('footer.speak')}</h2>
                                 <h1>{t('footer.with_us')}</h1>
                             </S.Title>
-                            <Image src={chat} alt="chat" draggable={'false'} />
+                            <Image src={chat} alt="chat" draggable="false" />
                         </S.Typography>
                         <S.Action>
                             <Link href={'/contact'} draggable="false">

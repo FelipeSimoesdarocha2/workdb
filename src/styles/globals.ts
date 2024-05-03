@@ -102,11 +102,11 @@ a[title]:hover {
 body {
 font-size: var(--fontSize-body-4);
 line-height: var(--lineHeight-5);
-font-family: "poppins-semibold", "poppins", sans-serif;
+font-family: "Open Sans" , "poppins-semibold", "poppins", sans-serif;
 }
 
 ::-webkit-scrollbar {
-width: 6px !important;
+width: 8px !important;
 }
 
 ::-webkit-scrollbar-thumb {
