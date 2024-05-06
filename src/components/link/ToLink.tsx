@@ -13,9 +13,11 @@ import { ButtonProps } from './models';
 const ToLink = ({ href, label, className }: ButtonProps) => {
     return (
         <S.Component className={` ${className} `}>
-            <Link href={href} draggable="false">
-                {label}
-            </Link>
+            <S.Content>
+                <Link href={href} draggable="false">
+                    {label}
+                </Link>
+            </S.Content>
         </S.Component>
     );
 };

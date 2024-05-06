@@ -5,7 +5,7 @@ export interface ItensProps {
 
 export type MenuItemProps = {
     menuItemKey?: string;
-    push: string;
+    push?: string;
     name: string;
     keye?: string;
     data: ItensProps[];

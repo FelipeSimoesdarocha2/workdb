@@ -92,4 +92,11 @@ export const Content = styled.div`
   .item:hover {
     background: rgba(219, 219, 219, 0.28);
   }
+
+  .active {
+    background:
+      repeat padding-box border-box 0% / auto scroll
+        linear-gradient(180deg, rgba(0, 180, 219, 0.37) 0%, rgba(0, 180, 219, 0.37) 100%),
+      rgba(247, 247, 247, 0);
+  }
 `;

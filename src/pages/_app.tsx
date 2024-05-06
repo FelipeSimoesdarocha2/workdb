@@ -2,6 +2,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import NextNprogress from 'nextjs-progressbar';
 
 // Translate
 import '../i18n';
@@ -49,6 +50,13 @@ function App({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       <NextIntlClientProvider locale={router.locale} timeZone="America/Chicago" messages={pageProps.messages}>
         {loading ? <Loading /> : <Component {...pageProps} />}
+        <NextNprogress
+          color='rgba(0, 175, 211, 0.99)'
+          startPosition={0}
+          stopDelayMs={0}
+          height={2}
+          showOnShallow={false}
+        />
       </NextIntlClientProvider>
     </QueryClientProvider>
   );

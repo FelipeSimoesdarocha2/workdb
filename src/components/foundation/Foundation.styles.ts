@@ -82,8 +82,13 @@ export const History = styled.div`
     color: #7a7a7a;
     font-size: 18px;
     line-height: 1.4em;
+  }
 
-    @media (max-width: 560px) {
+  @media (max-width: 560px) {
+    justify-content: center;
+    padding: 0 22px;
+
+    p {
       font-size: 14px;
       text-align: center;
       padding: 0 12px;

@@ -17,6 +17,10 @@ export const Content = styled.div`
   @media (max-width: 1101px) {
     flex-direction: column;
   }
+
+  @media (max-width: 560px) {
+    padding: 154.5px 0 64.5px;
+  }
 `;
 
 export const Outer = styled.div`
@@ -147,6 +151,7 @@ export const Button = styled.button`
 export const Local = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 60px;
   margin-bottom: 100px;
@@ -155,7 +160,11 @@ export const Local = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1058px;
+  width: 100%;
+  gap: 40px;
+
 
   @media (max-width: 1101px) {
     align-items: center;

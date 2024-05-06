@@ -79,10 +79,6 @@ export const Social = styled.div`
   @media (max-width: 1101px) {
     flex-direction: row;
   }
-
-  @media (max-width: 750px) {
-    flex-direction: column;
-  }
 `;
 
 export const Network = styled.div`

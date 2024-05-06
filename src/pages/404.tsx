@@ -6,16 +6,15 @@ import { useRouter } from 'next/router';
 // i18n
 import useTranslations from 'i18n';
 
+// Modules
+import { NotFoundScreen } from 'modules/screens/notFound';
+
 // Components
 import { Layout } from 'components/layout';
 
 const NotFound = () => {
   const { asPath } = useRouter();
   const t = useTranslations();
-
-  const handleBack = () => {
-    window.history.back();
-  };
 
   return (
     <>
@@ -29,10 +28,7 @@ const NotFound = () => {
         <link rel="canonical" href={`https://waiuru.com${asPath}`} />
       </Head>
       <Layout>
-        <h1>Esta pagina não existe</h1>
-        <button onClick={handleBack} aria-label="back">
-          <h1>voltar</h1>
-        </button>
+        <NotFoundScreen />
       </Layout>
     </>
   );

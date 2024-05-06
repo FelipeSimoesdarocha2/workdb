@@ -57,21 +57,21 @@ const Companys = () => {
       <S.Carrousel onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
         <div className='wrapper'>
           <button aria-label="Anterior" onClick={prevSlide}>
-            <Image src={next} alt="next" />
+            <Image src={next} alt="next" draggable="false" />
           </button>
           <S.Itens>
             {companys.map((innerArray, outerIndex) => (
               <S.Itens key={outerIndex} style={{ display: currentSlideIndex === outerIndex ? '' : 'none' }}>
                 {innerArray.map((company, innerIndex) => (
                   <S.Item key={innerIndex}>
-                    <Image src={company.src} alt={company.alt} />
+                    <Image src={company.src} alt={company.alt} draggable="false" />
                   </S.Item>
                 ))}
               </S.Itens>
             ))}
           </S.Itens>
           <button aria-label="Próximo" onClick={nextSlide}>
-            <Image src={next} alt="next" />
+            <Image src={next} alt="next" draggable="false" />
           </button>
         </div>
       </S.Carrousel>

@@ -7,6 +7,9 @@ import { useRouter } from 'next/router';
 // i18n
 import useTranslations from 'i18n';
 
+// Modules
+import { DataEngineeringScreen } from 'modules/screens/dataEngineering';
+
 // Components
 import { Layout } from 'components/layout';
 
@@ -26,7 +29,7 @@ const DataEngineering: NextPage = () => {
         <link rel="canonical" href={`https://waiuru.com${asPath}`} />
       </Head>
       <Layout selectedKey="4">
-        <h1>ENGENHARIA DE DADOS</h1>
+        <DataEngineeringScreen />
       </Layout>
     </>
   );

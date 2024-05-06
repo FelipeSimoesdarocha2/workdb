@@ -27,7 +27,7 @@ const Partners = () => {
             {partners.map((item, index) => (
               <S.Item key={index}>
                 <S.Container_Image>
-                  <Image src={item.image.src} alt={item.image.alt} />
+                  <Image src={item.image.src} alt={item.image.alt} draggable="false" />
                 </S.Container_Image>
                 <p
                   dangerouslySetInnerHTML={{

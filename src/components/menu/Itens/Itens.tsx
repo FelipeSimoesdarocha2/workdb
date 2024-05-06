@@ -17,10 +17,10 @@ const Itens = ({ name, data, push, keye, menuItemKey }: MenuItemProps) => {
 
     return (
         <S.Component className={`${keye === menuItemKey ? 'active' : ''}`}>
-            <Link href={push} draggable={false}>
+            <Link href={push || ''} draggable={false}>
                 {t(name)}
             </Link>
-            <S.Content id="sub_menu">
+            <S.Content id="sub_menu" className={`${keye === menuItemKey ? 'active' : ''}`}>
                 {data.map((item, index) => (
                     <div key={index} className={'item' + ' ' + `${asPath === item.value ? 'active' : ''}`}>
                         <Link href={item.value} draggable={false}>

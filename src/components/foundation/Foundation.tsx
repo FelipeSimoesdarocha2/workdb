@@ -14,25 +14,28 @@ import useTranslations from 'i18n';
 const Foundation = () => {
   const t = useTranslations();
 
+  const paragraph =
+    'Fundada em 2013 em Blumenau/SC e mais de 700 projetos entregues, somos especializados em soluções de Engenharia de Dados e Transformação Digital , e nos dedicamos a transformar operações na “Era dos Dados”. Nossa expertise técnica e paixão por dados têm ajudado empresas a transformar essas informações em oportunidades tangíveis de crescimento , otimizando os ambientes de TI para entregas de soluções de alta performance.';
+
   return (
     <S.Component>
       <S.Container>
         <S.Card>
           <div className="line" />
-          <Image src={company} alt="company" />
+          <Image src={company} alt="company" draggable="false" />
           <div id="image_container">
-            <Image src={shadow} alt="shadow" />
+            <Image src={shadow} alt="shadow" draggable="false" />
           </div>
         </S.Card>
         <S.History>
-          <p>
-            Fundada em <span>2013</span> em <span>Blumenau/SC</span> e mais de <span>700 projetos</span> entregues,
-            somos especializados em soluções de <span> Engenharia de Dados</span> e <span> Transformação Digital</span>{' '}
-            , e nos dedicamos a transformar operações na “Era dos Dados”. Nossa expertise técnica e paixão por dados têm
-            ajudado empresas a transformar essas informações em <span> oportunidades tangíveis</span> de{' '}
-            <span>crescimento</span> , otimizando os ambientes de TI para entregas de soluções de{' '}
-            <span>alta performance.</span>
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: paragraph.replace(
+                /(2013|Blumenau|SC|700 projetos|Engenharia|Engenharia de Dados|Transformação Digital|oportunidades tangíveis|crescimento|alta performance)/g,
+                '<strong>$1</strong>'
+              ),
+            }}
+          />
         </S.History>
       </S.Container>
     </S.Component>

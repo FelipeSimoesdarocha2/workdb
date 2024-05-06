@@ -5,7 +5,6 @@ export const Component = styled.div`
   align-items: center;
   justify-content: center;
   width: max-content;
-  height: 40px;
   padding: 0 22px;
   border-top-right-radius: 18px;
   border-bottom-left-radius: 18px;
@@ -13,6 +12,15 @@ export const Component = styled.div`
   box-shadow: 0 0 6px rgb(0, 175, 211);
   transition: all 0.2s ease;
   cursor: pointer;
+
+  &:hover {
+    background: rgb(0, 175, 211);
+    transition: all 0.2s ease;
+  }
+`;
+
+export const Content = styled.div`
+  padding: 6px 22px;
 
   a {
     color: #fff;
@@ -27,8 +35,5 @@ export const Component = styled.div`
     background-color: transparent;
   }
 
-  &:hover {
-    background: rgb(0, 175, 211);
-    transition: all 0.2s ease;
-  }
+
 `;

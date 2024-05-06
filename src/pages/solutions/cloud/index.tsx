@@ -7,6 +7,9 @@ import { useRouter } from 'next/router';
 // i18n
 import useTranslations from 'i18n';
 
+// Modules
+import { CloudScreen } from 'modules/screens/cloud';
+
 // Components
 import { Layout } from 'components/layout';
 
@@ -26,7 +29,7 @@ const Cloud: NextPage = () => {
         <link rel="canonical" href={`https://waiuru.com${asPath}`} />
       </Head>
       <Layout selectedKey="3">
-        <h1>Cloud</h1>
+        <CloudScreen />
       </Layout>
     </>
   );

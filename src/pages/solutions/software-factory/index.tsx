@@ -7,6 +7,9 @@ import { useRouter } from 'next/router';
 // i18n
 import useTranslations from 'i18n';
 
+// Modules
+import { SoftwareFactoryScreen } from 'modules/screens/softwareFactory';
+
 // Components
 import { Layout } from 'components/layout';
 
@@ -26,7 +29,7 @@ const SoftwareFactory: NextPage = () => {
         <link rel="canonical" href={`https://waiuru.com${asPath}`} />
       </Head>
       <Layout selectedKey="5">
-        <h1>FÁBRICA DE SOFTWARE</h1>
+        <SoftwareFactoryScreen />
       </Layout>
     </>
   );

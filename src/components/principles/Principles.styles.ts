@@ -7,11 +7,10 @@ export const Component = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-
-  position: relative;
   width: 100%;
-  height: 100;
+  height: 100%;
   min-height: 294px;
+
   background-blend-mode: multiply;
   background-image: url(${bg_view.src});
   background-clip: border-box;

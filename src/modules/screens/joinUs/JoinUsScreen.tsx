@@ -11,6 +11,11 @@ import * as S from './JoinUs.styles';
 // i18n
 import useTranslations from 'i18n';
 
+// Components
+import { Differential } from 'components/differential';
+import { Opportunities } from 'components/opportunities';
+import { Startup } from 'components/startup';
+
 const JoinUsScreen = () => {
   const t = useTranslations();
 
@@ -38,6 +43,9 @@ const JoinUsScreen = () => {
           <div className="bg" />
         </div>
       </S.Content>
+      <Startup />
+      <Opportunities />
+      <Differential />
     </S.Container>
   );
 };
