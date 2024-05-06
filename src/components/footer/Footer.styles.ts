@@ -4,8 +4,10 @@ export const Component = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #235c88;
+  position: relative;
   min-height: 281px;
+  z-index: 5;
+  background-image: radial-gradient(circle at 94%, #105c86 0%, 20%, rgba(16, 92, 134, 0.99) 40%);
 
   @media (max-width: 750px) {
     padding: 32px 0;
@@ -120,39 +122,6 @@ export const Title = styled.div`
     color: #00b5db;
     font-size: 33px;
     line-height: 0.8em;
-  }
-`;
-
-export const Action = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 37px;
-  border-top-right-radius: 18px;
-  border-bottom-left-radius: 18px;
-  border: 1px solid #00afd3;
-  box-shadow: 0 0 6px rgb(0, 175, 211);
-  transition:
-    all 0.2s ease,
-    visibility;
-
-  ::selection {
-    background: none;
-  }
-
-  &:hover {
-    background: rgb(0, 175, 211);
-    transition:
-      all 0.2s ease,
-      visibility;
-  }
-
-  a {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
   }
 `;
 

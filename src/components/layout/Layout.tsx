@@ -26,26 +26,22 @@ import { useLayout } from './useLayout';
 const Layout = ({ selectedKey, children }: LayoutProps) => {
   const { t, isMenu, isMidle, isMobile, sub_menus, handleOpenMenu } = useLayout();
 
-  const isOpenMenu = (keys: string[]) => {
-    return keys.includes(selectedKey ?? '');
-  };
-
   return (
     <S.Container>
       <Header>
-        <Link title="ir para pagina inicial" href="/" draggable="false">
+        <Link title="" href="/" draggable="false">
           <Image src={logo} alt="logo" draggable="false" />
         </Link>
         <Menu>
           <Menu.ItemGroup>
             <Menu.Item menuItemKey="1" push="/about" name={t('menu.about')} keye={selectedKey} />
-            <Menu.Item menuItemKey="2" push="/solutions" name={t('menu.solutions')} keye={selectedKey} />
+            <Menu.Itens menuItemKey="2" push="/solutions" name={'menu.solutions'} keye={selectedKey} data={sub_menus} />
             <Menu.Item menuItemKey="8" push="/join-us" name={t('menu.join_us')} keye={selectedKey} />
             <Menu.Item menuItemKey="9" push="/contact" name={t('menu.contact')} keye={selectedKey} />
           </Menu.ItemGroup>
         </Menu>
         <S.Actions>
-          <Link href="https://www.workdatacloud.com" title="abrir link" draggable="false" target="_blank">
+          <Link href="https://www.workdatacloud.com" draggable="false" target="_blank">
             <Image src={workdatacloud} alt="workdatacloud" draggable="false" />
           </Link>
           <Internationalization />
@@ -55,7 +51,6 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
       <Footer />
       <Cookie />
       <Link
-        title="entrar em contato via whatsapp"
         className="whatsapp"
         target="_blank"
         draggable="false"

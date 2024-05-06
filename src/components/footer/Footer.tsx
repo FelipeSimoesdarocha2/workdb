@@ -15,6 +15,8 @@ import * as S from './Footer.styles';
 // i18n
 import useTranslation from 'i18n';
 
+import { ToLink } from 'components/link';
+
 const Footer = () => {
     const t = useTranslation();
 
@@ -120,11 +122,7 @@ const Footer = () => {
                             </S.Title>
                             <Image src={chat} alt="chat" draggable="false" />
                         </S.Typography>
-                        <S.Action>
-                            <Link href={'/contact'} draggable="false">
-                                {t('footer.talk_specialist')}
-                            </Link>
-                        </S.Action>
+                        <ToLink href={'/contact'} label={t('footer.talk_specialist')} />
                     </S.Row>
                     <S.Local>
                         <Link

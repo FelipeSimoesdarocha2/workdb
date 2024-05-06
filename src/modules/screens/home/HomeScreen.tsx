@@ -6,18 +6,19 @@ import Link from 'next/link';
 import { useRef, useState, useEffect, Fragment } from 'react';
 
 // Assets
+import bg_hero from 'assets/components/bg_hero.png';
 import next_prev from 'assets/icons/next_prev.svg';
-import presentation from 'assets/icons/presentation.svg';
 import share from 'assets/icons/share.svg';
 import banner_hero from 'assets/pages/home/banner_hero.png';
-import bg_hero_two from 'assets/pages/home/bg_hero_two.png';
-import bg_hero from 'assets/pages/home/bg_hero.png';
 
 // Styles
 import * as S from './Home.styles';
 
 // i18n
 import useTranslations from 'i18n';
+
+// Components
+import { Companys } from 'components/companys';
 
 // Constants
 import { dataCarrousel } from './Home.constants';
@@ -26,40 +27,41 @@ const HomeScreen = () => {
   const t = useTranslations();
 
   const carouselRef = useRef<HTMLDivElement | null>(null);
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
+
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [functionCalled, setFunctionCalled] = useState<boolean>(false);
 
   const prevSlide = () => {
-    setCurrentSlide(prevIndex => (prevIndex - 1 + dataCarrousel.length) % dataCarrousel.length);
+    setCurrentSlideIndex(prevIndex => (prevIndex - 1 + dataCarrousel.length) % dataCarrousel.length);
     setFunctionCalled(true);
   };
 
   const nextSlide = () => {
-    setCurrentSlide(prevIndex => (prevIndex + 1) % dataCarrousel.length);
+    setCurrentSlideIndex(prevIndex => (prevIndex + 1) % dataCarrousel.length);
     setFunctionCalled(true);
   };
 
-  const handleCardClick = (index: number) => {
-    setCurrentSlide(index);
+  const selectItem = (index: number) => {
+    setCurrentSlideIndex(index);
     setFunctionCalled(true);
   };
 
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     if (!isHovered) {
-  //       nextSlide();
-  //     }
-  //   }, 7000);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (!isHovered) {
+        nextSlide();
+      }
+    }, 7000);
 
-  //   return () => clearInterval(intervalId);
-  // }, [isHovered]);
+    return () => clearInterval(intervalId);
+  }, [isHovered]);
 
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.1,
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver(entries => {
@@ -67,7 +69,7 @@ const HomeScreen = () => {
         if (entry.isIntersecting) {
           if (functionCalled && carouselRef.current) {
             const children = carouselRef.current.children as HTMLCollectionOf<HTMLElement>;
-            children[currentSlide]?.scrollIntoView({
+            children[currentSlideIndex]?.scrollIntoView({
               behavior: 'smooth',
               block: 'center',
               inline: 'start',
@@ -88,7 +90,7 @@ const HomeScreen = () => {
         observer.unobserve(carouselElement);
       }
     };
-  }, [currentSlide, functionCalled]);
+  }, [currentSlideIndex, functionCalled]);
 
   return (
     <S.Container>
@@ -119,6 +121,15 @@ const HomeScreen = () => {
           <Image src={bg_hero} alt="banner_hero" draggable="false" />
           <Image src={banner_hero} alt="banner_hero" priority objectFit="cover" draggable="false" />
         </S.Container_Image>
+        <div id="video_container">
+          <div className='bg' />
+          <video
+            loop
+            muted
+            autoPlay
+            src="https://video.wixstatic.com/video/11062b_03c50f8fe4a34cc297a984e483a282ef/1080p/mp4/file.mp4"
+          />
+        </div>
       </S.Content>
       <S.Solutions>
         <S.Gradient>
@@ -139,7 +150,6 @@ const HomeScreen = () => {
                 <Image src={next_prev} alt="prev" draggable="false" />
               </S.Btn>
             </S.Absolute_Btn_Left>
-
             <S.Carrousel_Inner
               ref={carouselRef}
               onMouseEnter={() => setIsHovered(true)}
@@ -148,28 +158,26 @@ const HomeScreen = () => {
               {dataCarrousel.map((item, index) => (
                 <S.Carrousel_Content
                   key={index}
-                  style={{ display: currentSlide === index ? '' : 'none' }}
+                  style={{ display: currentSlideIndex === index ? '' : 'none' }}
                   width={item.max_width}
                   className={
-                    currentSlide === index
+                    currentSlideIndex === index
                       ? '' // Classe padrão para o slide atual
-                      : currentSlide > index
-                        ? 'prev' // Classe para retroceder
-                        : 'next' // Classe para avançar
+                      : currentSlideIndex > index
+                        ? 'prev'
+                        : 'next'
                   }
                 >
                   <S.Wrapper>
                     <S.Typography_Carrousel>
                       <h1>{item.title}</h1>
                       <p>
-                        {t(`${item.sub_title}`)
-                          .split('\n')
-                          .map((line, index, arr) => (
-                            <Fragment key={index}>
-                              {line}
-                              {index < arr.length - 1 && <br />}
-                            </Fragment>
-                          ))}
+                        {`${item.sub_title}`.split('\n').map((line, index, arr) => (
+                          <Fragment key={index}>
+                            {line}
+                            {index < arr.length - 1 && <br />}
+                          </Fragment>
+                        ))}
                       </p>
                     </S.Typography_Carrousel>
                     <S.Button>
@@ -178,7 +186,6 @@ const HomeScreen = () => {
                       </Link>
                     </S.Button>
                   </S.Wrapper>
-
                   <S.Container_Banner
                     right={item?.right}
                     left={item?.left}
@@ -189,13 +196,24 @@ const HomeScreen = () => {
                   >
                     <div>
                       <Image src={item.image.src} alt={item.image.alt} draggable="false" />
-                      <Image src={bg_hero_two} alt="bg_hero_two" draggable="false" />
+                      <Image src={bg_hero} alt="bg_hero" draggable="false" />
                     </div>
                   </S.Container_Banner>
                 </S.Carrousel_Content>
               ))}
             </S.Carrousel_Inner>
 
+            <S.Control>
+              <ol>
+                {dataCarrousel.map((item, index) => (
+                  <li
+                    key={index}
+                    onClick={() => selectItem(index)}
+                    className={currentSlideIndex === index ? 'active' : ''}
+                  />
+                ))}
+              </ol>
+            </S.Control>
             <S.Absolute_Btn>
               <S.Btn onClick={nextSlide}>
                 <Image src={next_prev} alt="next" draggable="false" />
@@ -234,15 +252,7 @@ const HomeScreen = () => {
           </div>
         </S.Inner>
       </S.Contact_Intro>
-
-      <S.Certification>
-        <S.Row>
-          <Image src={presentation} width={39} alt="presentation" />
-          <h1>NOSSAS CERTIFICAÇÕES</h1>
-          <Image src={presentation} width={39} alt="presentation" />
-        </S.Row>
-        <S.Companies></S.Companies>
-      </S.Certification>
+      <Companys />
     </S.Container>
   );
 };

@@ -7,6 +7,9 @@ import { useRouter } from 'next/router';
 // i18n
 import useTranslations from 'i18n';
 
+// Modules
+import { JoinUsScreen } from 'modules/screens/joinUs';
+
 // Components
 import { Layout } from 'components/layout';
 
@@ -26,7 +29,7 @@ const JoinUS: NextPage = () => {
         <link rel="canonical" href={`https://waiuru.com${asPath}`} />
       </Head>
       <Layout selectedKey="8">
-        <h1>Trabalhe conosco</h1>
+        <JoinUsScreen />
       </Layout>
     </>
   );

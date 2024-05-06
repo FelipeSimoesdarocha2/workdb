@@ -25,7 +25,7 @@ const Solutions: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href={`https://waiuru.com${asPath}`} />
       </Head>
-      <Layout selectedKey="2">
+      <Layout selectedKey="3">
         <h1>Soluções</h1>
       </Layout>
     </>

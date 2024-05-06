@@ -9,36 +9,34 @@ import infrastructure from 'assets/pages/home/infrastructure.png';
 import software_factory from 'assets/pages/home/software_factory.png';
 
 interface ContainerProps {
-  data: {
-    title: string;
-    sub_title: string;
-    image: {
-      alt: string;
-      src: StaticImageData;
-    };
-    action: {
-      url: string;
-    };
-    max_width: string;
-    right?: string;
-    top?: string;
-    left?: string;
-    topPng?: string;
-    rightPng?: string;
-    leftPng?: string;
-  }[];
+  title: string;
+  sub_title: string;
+  image: {
+    alt: string;
+    src: StaticImageData;
+  };
+  action: {
+    url: string;
+  };
+  max_width: string;
+  right?: string;
+  top?: string;
+  left?: string;
+  topPng?: string;
+  rightPng?: string;
+  leftPng?: string;
 }
 
-const dataCarrousel: ContainerProps['data'] = [
+const dataCarrousel: ContainerProps[] = [
   {
     title: 'Cloud',
     sub_title: 'Garanta a segurança e confiabilidade operacional de seus\ndados com padrões de excelência.',
     image: {
       src: cloud,
-      alt: '',
+      alt: 'cloud',
     },
     action: {
-      url: '',
+      url: 'solutions/cloud',
     },
     max_width: '948px',
     right: '-20px',
@@ -53,10 +51,10 @@ const dataCarrousel: ContainerProps['data'] = [
       'Obtenha insights valiosos e dados relevantes. Desenvolvemos uma\narquitetura de dados eficiente para você.',
     image: {
       src: data_engineering,
-      alt: '',
+      alt: 'data_engineering',
     },
     action: {
-      url: '',
+      url: '/solutions/data-engineering',
     },
     max_width: '898px',
     right: '0',
@@ -70,10 +68,10 @@ const dataCarrousel: ContainerProps['data'] = [
       'Implemente soluções precisas com um time de especialistas.\nAsseguramos entregas rápidas e qualificadas.',
     image: {
       src: software_factory,
-      alt: '',
+      alt: 'software_factory',
     },
     action: {
-      url: '',
+      url: '/solutions/software-factory',
     },
     max_width: '888px',
     right: '0',
@@ -87,10 +85,10 @@ const dataCarrousel: ContainerProps['data'] = [
       'Garanta monitoramento contínuo e obtenha insights em tempo real.\nO Guardião oferece acompanhamento 24/7 através de um dashboard intuitivo.',
     image: {
       src: guardian,
-      alt: '',
+      alt: 'guardian',
     },
     action: {
-      url: '',
+      url: '/solutions/guardian',
     },
     max_width: '838px',
     right: '0',
@@ -104,10 +102,10 @@ const dataCarrousel: ContainerProps['data'] = [
     sub_title: 'Estruture operações de TI ágeis, resilientes e escaláveis. Implantamos\nambientes on-premise ou cloud.',
     image: {
       src: infrastructure,
-      alt: '',
+      alt: 'infrastructure',
     },
     action: {
-      url: '',
+      url: '/solutions/infrastructure',
     },
     max_width: '888px',
     left: '100px',

@@ -7,6 +7,9 @@ import { useRouter } from 'next/router';
 // i18n
 import useTranslations from 'i18n';
 
+// Modules
+import { AboutScreen } from 'modules/screens/about';
+
 // Components
 import { Layout } from 'components/layout';
 
@@ -26,7 +29,7 @@ const About: NextPage = () => {
         <link rel="canonical" href={`https://waiuru.com${asPath}`} />
       </Head>
       <Layout selectedKey="1">
-        <h1>Quem Somos</h1>
+        <AboutScreen />
       </Layout>
     </>
   );

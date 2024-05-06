@@ -1,7 +1,8 @@
+// Assets
 import bg_fixed from 'assets/pages/home/bg_fixed.png';
 
 import styled from 'styled-components';
-// Assets
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,11 +19,37 @@ export const Content = styled.section`
   max-height: 690px;
   padding: 100px 0 0;
   background-color: rgb(16, 92, 134);
+  overflow: hidden;
 
   @media (max-width: 1101px) {
     flex-direction: column;
     align-items: center;
     padding-bottom: 100px;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+  }
+
+  #video_container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .bg {
+    position: absolute;
+    background-color: rgb(16, 92, 134);
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
   }
 `;
 
@@ -31,6 +58,7 @@ export const Hero = styled.div`
   flex-direction: column;
   gap: 3rem;
   margin: 92px 0 0;
+  z-index: 5;
 
   @media (max-width: 1101px) {
     align-items: center;
@@ -139,6 +167,7 @@ export const Action = styled.div`
 export const Container_Image = styled.div`
   position: relative;
   margin: 56px 0 0;
+  z-index: 5;
 
   @media (max-width: 1101px) {
     display: none;
@@ -254,16 +283,16 @@ export const Carousel = styled.div`
   height: 100%;
   margin: 83px 0 0;
   overflow: hidden;
+
+  @media (max-width: 560px) {
+    padding: 0 22px;
+  }
 `;
 
 export const Absolute_Btn_Left = styled.div`
   position: absolute;
   left: 0;
   z-index: 10;
-
-  button {
-    margin-left: 100px;
-  }
 `;
 
 export const Absolute_Btn = styled.div`
@@ -271,15 +300,50 @@ export const Absolute_Btn = styled.div`
   right: 0;
   transform: rotate(-180deg);
   z-index: 10;
-
-  button {
-    margin-left: 100px;
-  }
 `;
 
 export const Btn = styled.button`
   :hover {
     opacity: 0.7;
+  }
+
+  margin-left: 100px;
+
+  @media (max-width: 560px) {
+    margin-left: 30px;
+  }
+`;
+
+export const Control = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+  z-index: 30;
+
+  ol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  li {
+    margin: 0 7px;
+    list-style-type: disc;
+    color: rgba(138, 138, 138, 1);
+    cursor: pointer;
+  }
+
+  .active {
+    color: red;
+    color: rgba(63, 67, 73, 1);
+  }
+
+  li:hover {
+    opacity: 0.8;
   }
 `;
 
@@ -312,8 +376,9 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  position: relative;
   width: 100%;
-  clip: rect(0, auto, auto, 0);
+  z-index: 2;
 `;
 
 export const Typography_Carrousel = styled.div`
@@ -324,11 +389,19 @@ export const Typography_Carrousel = styled.div`
     color: #00b4db;
     font-size: 69px;
     font-family: 'open sans', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 42px;
+    }
   }
 
   p {
     color: #898989;
     font-size: 21px;
+
+    @media (max-width: 560px) {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -341,12 +414,25 @@ export const Button = styled.button`
   padding: 0 26px;
   border: 2px solid #00afd3;
 
+  backdrop-filter: blur(2px);
+  box-shadow: 0px 7px 10px 3px #0000001a;
+  background: hsla(0, 0%, 100%, 0.8);
+
+  @media (max-width: 560px) {
+    height: 42px;
+  }
+
   a {
     color: #00b5db;
     font-size: 16px;
     font-weight: 700;
+    line-height: 1.2rem;
     font-family: 'open sans', sans-serif;
     text-transform: uppercase;
+
+    @media (max-width: 560px) {
+      height: 14px;
+    }
   }
 
   &:hover {
@@ -372,12 +458,19 @@ export const Container_Banner = styled.div<{
   leftPng?: string;
 }>`
   position: relative;
+  z-index: 1;
 
   div {
     position: absolute;
     right: ${props => props.right};
     top: ${props => props.top};
     left: ${props => props.left};
+
+    @media (max-width: 560px) {
+      transform: scale(0.5);
+      top: ${props => props.top};
+      left: ${props => props.left};
+    }
 
     img:first-child {
       position: relative;
@@ -452,7 +545,7 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  list-style-type: disc !important;
+  list-style-type: disc;
 
   p {
     color: #fff;
@@ -494,32 +587,4 @@ export const Action_Contact = styled.div`
     text-transform: uppercase;
     text-shadow: 0 0 6px #ffffffd9;
   }
-`;
-
-export const Certification = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  background-color: #f1f1f1;
-`;
-
-export const Row = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 36px;
-
-  h1 {
-    color: #105c86;
-    font-size: 30px;
-    font-family: 'poppins-semibold', poppins, sans-serif;
-  }
-`;
-
-export const Companies = styled.div`
-  width: 100%;
-  height: 186px;
-  margin: 0 0 65px;
-  background-color: rgb(219, 219, 219, 1);
 `;

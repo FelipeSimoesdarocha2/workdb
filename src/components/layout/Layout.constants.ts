@@ -1,27 +1,23 @@
 const sub_menus = [
     {
-        value: '/solutions/',
-        name: '.',
+        value: '/solutions/cloud',
+        name: 'menu.cloud',
     },
     {
-        value: '/solutions/',
-        name: '.',
+        value: '/solutions/data-engineering',
+        name: 'menu.data_engineering',
     },
     {
-        value: '/solutions/',
-        name: '.',
+        value: '/solutions/guardian',
+        name: 'menu.guardian',
     },
     {
-        value: '/solutions/',
-        name: '.',
+        value: '/solutions/infrastructure',
+        name: 'menu.infrastructure',
     },
     {
-        value: '/solutions/',
-        name: '.',
-    },
-    {
-        value: '/solutions/',
-        name: '.',
+        value: '/solutions/software-factory',
+        name: 'menu.software_factory',
     },
 ];
 
