@@ -64,4 +64,23 @@ export const Actions = styled.div`
     border: 0px solid #8a8a8a;
     background: rgba(255, 255, 255, 0.8);
   }
+
+  @media (max-width: 560px) {
+    a {
+      border-radius: 0 10px 0 10px;
+    }
+  }
+`;
+
+export const MenuMobile = styled.div`
+  cursor: pointer;
+
+  .menu_icon,
+  .exit_icon {
+    transition: transform 0.5s ease;
+  }
+
+  .exit_icon {
+    transform: rotate(180deg);
+  }
 `;

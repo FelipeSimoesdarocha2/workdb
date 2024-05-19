@@ -5,6 +5,9 @@ import Link from 'next/link';
 // Assets
 import logo from 'assets/components/logo.png';
 import workdatacloud from 'assets/components/workdatacloud.png';
+import workdataminicloud from 'assets/components/workdataminicloud.png';
+import exit from 'assets/icons/exit_menu.svg';
+import menu from 'assets/icons/menu.svg';
 import whatsapp from 'assets/icons/whatsapp.png';
 
 // Styles
@@ -29,28 +32,42 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
   return (
     <S.Container>
       <Header>
-        <Link title="" href="/" draggable="false">
-          <Image src={logo} alt="logo" draggable="false" />
-        </Link>
-        <Menu>
-          <Menu.ItemGroup>
-            <Menu.Item menuItemKey="1" push="/about" name={t('menu.about')} keye={selectedKey} />
-            <Menu.Itens
-              menuItemKey="2"
-              //  push="/solutions"
-              name={'menu.solutions'}
-              keye={selectedKey}
-              data={sub_menus}
+        {isMidle && (
+          <S.MenuMobile onClick={handleOpenMenu}>
+            <Image
+              src={!isMenu ? menu : exit}
+              width={32}
+              className={!isMenu ? 'menu_icon' : 'exit_icon'}
+              alt="img"
+              priority
+              draggable="false"
             />
-            <Menu.Item menuItemKey="8" push="/join-us" name={t('menu.join_us')} keye={selectedKey} />
-            <Menu.Item menuItemKey="9" push="/contact" name={t('menu.contact')} keye={selectedKey} />
-          </Menu.ItemGroup>
-        </Menu>
+          </S.MenuMobile>
+        )}
+        <Link href="/" draggable="false">
+          <Image src={logo} alt="logo" draggable="false" width={isMobile ? 96 : undefined} />
+        </Link>
+        {!isMidle && (
+          <Menu>
+            <Menu.ItemGroup>
+              <Menu.Item menuItemKey="1" push="/about" name={t('menu.about')} keye={selectedKey} />
+              <Menu.Itens
+                menuItemKey="2"
+                //  push="/solutions"
+                name={'menu.solutions'}
+                keye={selectedKey}
+                data={sub_menus}
+              />
+              <Menu.Item menuItemKey="8" push="/join-us" name={t('menu.join_us')} keye={selectedKey} />
+              <Menu.Item menuItemKey="9" push="/contact" name={t('menu.contact')} keye={selectedKey} />
+            </Menu.ItemGroup>
+          </Menu>
+        )}
         <S.Actions>
           <Link href="https://www.workdatacloud.com" draggable="false" target="_blank">
-            <Image src={workdatacloud} alt="workdatacloud" draggable="false" />
+            <Image src={!isMobile ? workdatacloud : workdataminicloud} alt="workdatacloud" draggable="false" />
           </Link>
-          <Internationalization />
+          {!isMobile && <Internationalization />}
         </S.Actions>
       </Header>
       <S.Content>{children}</S.Content>

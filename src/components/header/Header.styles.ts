@@ -32,4 +32,5 @@ export const Content = styled.div`
   gap: 2.5rem;
   width: 100%;
   max-width: 1160px;
+  padding: 0 22px;
 `;
