@@ -39,6 +39,11 @@ export const Card = styled.div`
     transform: scale(0.6);
   }
 
+  & :nth-child(2) {
+    position: relative;
+    z-index: 2;
+  }
+
   #image_container {
     display: flex;
     align-items: center;
@@ -46,7 +51,6 @@ export const Card = styled.div`
     position: absolute;
     width: 110%;
     bottom: -22px;
-    z-index: 42;
   }
 
   #image_container img {
@@ -92,7 +96,7 @@ export const History = styled.div`
   }
 
   @media (max-width: 560px) {
-  justify-content: center;
+    justify-content: center;
 
     padding: 0 22px;
 

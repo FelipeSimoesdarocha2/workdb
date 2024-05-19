@@ -54,7 +54,7 @@ const ICookie = () => {
             <p>{t('cookie.menu.actions.acept')}</p>
           </button>
           <button onClick={() => setShowCookie(false)} className="exit">
-            <Image src={exit} alt="exit" />
+            <Image src={exit} alt="exit" draggable="false" />
           </button>
         </S.Actions>
       </S.Container>

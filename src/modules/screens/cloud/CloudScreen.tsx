@@ -26,7 +26,6 @@ const CloudScreen = () => {
           />
         </div>
       </S.Content>
-
       <Solutions />
     </S.Container>
   );

@@ -28,15 +28,18 @@ const Solutions = () => {
             <h1>Possuímos expertise em soluções em nuvem</h1>
             <p
               dangerouslySetInnerHTML={{
-                __html: paragraph.replace(/(soluções abrangentes|personalizadas|maturidade digital|tecnológica)/g, '<strong>$1</strong>'),
+                __html: paragraph.replace(
+                  /(soluções abrangentes|personalizadas|maturidade digital|tecnológica)/g,
+                  '<strong>$1</strong>'
+                ),
               }}
             />
           </S.Typography>
-          <ToLink href={'/contact'} label={'FALE COM UM ESPECIALISTA MULTICLOUD'} className='action' />
+          <ToLink href={'/contact'} label={'FALE COM UM ESPECIALISTA MULTICLOUD'} className="action" />
         </S.Content>
         <S.Container_Image>
-          <Image src={bg_hero} alt="" />
-          <Image src={banner_hero} alt="" />
+          <Image src={bg_hero} alt="" draggable="false" />
+          <Image src={banner_hero} alt="" draggable="false" />
         </S.Container_Image>
       </S.Container>
     </S.Component>

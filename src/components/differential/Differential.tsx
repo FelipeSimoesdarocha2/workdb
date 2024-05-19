@@ -21,7 +21,7 @@ const Differential = () => {
           {differential.map((item, index) => (
             <S.Item key={index}>
               <S.Wrapper>
-                <Image src={item.src} alt={item.title} />
+                <Image src={item.src} alt={item.title} draggable="false" />
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
               </S.Wrapper>

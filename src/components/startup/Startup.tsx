@@ -19,9 +19,9 @@ const Startup = () => {
       <S.Container>
         <S.Card>
           <div className="line" />
-          <Image src={startup} alt="startup" />
+          <Image src={startup} alt="startup" draggable="false" />
           <div id="image_container">
-            <Image src={shadow} alt="shadow" />
+            <Image src={shadow} alt="shadow" draggable="false" />
           </div>
         </S.Card>
         <S.History>
