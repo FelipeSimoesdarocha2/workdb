@@ -11,7 +11,7 @@ const Header = ({ children }: SiderProps) => {
     const { isActive } = useHeader();
 
     return (
-        <S.Component className={` ${isActive ? 'active' : 'afeeeeeee'}`}>
+        <S.Component className={` ${isActive ? 'active' : ''}`}>
             <S.Content>{children}</S.Content>
         </S.Component>
     );

@@ -70,19 +70,19 @@ const Internationalization = () => {
   }, []);
 
   return (
-    <S.Component onClick={toggleSelectVisibility} ref={componentRef} className={`${isFocused ? 'focused' : null}`}>
+    <S.Component onClick={toggleSelectVisibility} ref={componentRef} className={`${isFocused ? 'focused' : ''}`}>
       <S.Content>
         <S.Wrapper>
           <S.Value>
             <Image src={flagSrc} alt="Flag" draggable="false" />
             <S.Label>{itens.find(e => e.value === languageSelected)?.label}</S.Label>
           </S.Value>
-          <span className={`${isFocused ? 'focused-arrow' : null}`}>
+          <span className={`${isFocused ? 'focused-arrow' : ''}`}>
             <Image src={arrow} alt="arrow" draggable="false" />
           </span>
         </S.Wrapper>
         {openList && (
-          <S.Inner className={`${isFocused ? 'focused' : null}`}>
+          <S.Inner className={`${isFocused ? 'focused' : ''}`}>
             <S.List>
               {itens
                 .filter(e => e.value !== selectedOption)
@@ -90,7 +90,7 @@ const Internationalization = () => {
                   <S.Item
                     key={key}
                     onClick={() => handleOptionClick(option.value)}
-                    className={`${selectedOption === option.label ? `${'selected'}` : null}`}
+                    className={`${selectedOption === option.label ? `${'selected'}` : ''}`}
                   >
                     <Image src={option.value === 'en' ? en : pt} alt="Flag" width={22} draggable="false" />
                     <S.Label>{option.label}</S.Label>
