@@ -1,3 +1,7 @@
+// Next
+import Image from 'next/image';
+import Link from 'next/link';
+
 // Styles
 import * as S from './Cloud.styles';
 
@@ -27,6 +31,43 @@ const CloudScreen = () => {
         </div>
       </S.Content>
       <Solutions />
+
+      {/* <S.Contact_Intro>
+        <S.Inner>
+          <S.Typography_Contact>
+            <h1>Transfira de forma segura e eficiente sistemas críticos para a computação em nuvem</h1>
+            <p>Assegure a segurança e confiabilidade operacional de seus dados através de padrões elevados.</p>
+          </S.Typography_Contact>
+          <S.Action_Contact>
+            <Link href={'/solutions/data-engineering'} draggable="false">
+              Descubra os benefícios ao migrar para a computação em nuvem{' '}
+            </Link>
+          </S.Action_Contact>
+        </S.Inner>
+        <S.List>
+          <S.Item>
+            <p>Garantia de backup e segurança.</p>
+          </S.Item>
+          <S.Item>
+            <p>Elimine os custos de manutenção de hardware.</p>
+          </S.Item>
+          <S.Item>
+            <p>Aumente a escala de forma imediata.</p>
+          </S.Item>
+          <S.Item>
+            <p>Pague somente pelos recursos utilizados.</p>
+          </S.Item>
+          <S.Item>
+            <p>Inclui licenças de banco de dados (BD) e sistema operacional (SO).</p>
+          </S.Item>
+          <S.Item>
+            <p>Economize até 80% nos custos totais de propriedade (TCO). .</p>
+          </S.Item>
+          <S.Item>
+            <p>Consolide suas informações em um único sistema.</p>
+          </S.Item>
+        </S.List>
+      </S.Contact_Intro> */}
     </S.Container>
   );
 };

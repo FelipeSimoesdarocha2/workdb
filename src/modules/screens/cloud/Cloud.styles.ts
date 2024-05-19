@@ -1,3 +1,6 @@
+// Assets
+import bg_fixed from 'assets/pages/cloud/bg_fixed.webp';
+
 import styled from 'styled-components';
 
 export const Container = styled.div``;
@@ -64,3 +67,96 @@ export const Title = styled.h1`
     font-size: 44px;
   }
 `;
+
+export const Contact_Intro = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 492px;
+  background-blend-mode: multiply;
+  background-image: url(${bg_fixed.src});
+  background-clip: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+`;
+
+export const Typography_Contact = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  max-width: 533px;
+
+  h1 {
+    color: #00b4db;
+    font-size: 33px;
+    line-height: 1.2em;
+    font-family: 'poppins-semibold', poppins, sans-serif;
+  }
+
+  p {
+    color: #fafafa;
+    font-size: 21px;
+    line-height: 1.5em;
+    font-family: 'open sans', sans-serif;
+  }
+`;
+
+export const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  padding-inline-start: 1.3em;
+  margin-inline-start: 0.5em;
+`;
+
+export const Item = styled.li`
+  list-style-type: disc;
+
+  p {
+    color: #fff;
+    font-size: 16px;
+    max-width: 455px;
+  }
+`;
+
+export const Action_Contact = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 523px;
+  height: 48px;
+  padding: 0 32px;
+  border-top-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  transition:
+    all 0.2s ease,
+    visibility;
+
+  ::selection {
+    background: none;
+  }
+
+  &:hover {
+    background: #105c86;
+    transition:
+      all 0.2s ease,
+      visibility;
+  }
+
+  a {
+    color: #00B4DB;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'poppins-semibold', poppins, sans-serif;
+  }
+`;
+
+export const Inner = styled.div``;
