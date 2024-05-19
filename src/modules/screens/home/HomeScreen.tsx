@@ -122,7 +122,7 @@ const HomeScreen = () => {
           <Image src={banner_hero} alt="banner_hero" priority objectFit="cover" draggable="false" />
         </S.Container_Image>
         <div id="video_container">
-          <div className='bg' />
+          <div className="bg" />
           <video
             loop
             muted
@@ -134,12 +134,10 @@ const HomeScreen = () => {
       <S.Solutions>
         <S.Gradient>
           <S.Title_Gradient>
-            <span>
-              <h2>CONHEÇA NOSSAS</h2>
-              <h1>SOLUÇÕES</h1>
-            </span>
+            <h2>CONHEÇA NOSSAS</h2>
+            <h1>SOLUÇÕES</h1>
             <S.Container_Share>
-              <Image src={share} alt="share" width={65} draggable="false" />
+              <Image src={share} alt="share" draggable="false" />
             </S.Container_Share>
           </S.Title_Gradient>
         </S.Gradient>

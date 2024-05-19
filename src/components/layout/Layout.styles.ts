@@ -24,6 +24,23 @@ export const Container = styled.div`
     z-index: 998;
     bottom: 30px;
     right: 30px;
+
+    @media (max-width: 560px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      overflow: hidden;
+      background-color: rgb(33 211 102);
+      right: 15px;
+      bottom: 15px;
+
+      img {
+        width: 17px;
+      }
+    }
   }
 
   .whatsapp:hover {

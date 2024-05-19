@@ -63,9 +63,9 @@ export const Col = styled.div`
       visibility;
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 560px) {
     a {
-      text-align: center;
+      font-size: 10px;
     }
   }
 `;
@@ -78,6 +78,12 @@ export const Social = styled.div`
 
   @media (max-width: 1101px) {
     flex-direction: row;
+  }
+
+  @media (max-width: 560px) {
+    .home img {
+      width: 107px;
+    }
   }
 `;
 
@@ -100,6 +106,13 @@ export const Typography = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
+
+  @media (max-width: 560px) {
+    justify-content: center;
+    img {
+      display: none;
+    }
+  }
 `;
 
 export const Title = styled.div`
@@ -119,12 +132,30 @@ export const Title = styled.div`
     font-size: 33px;
     line-height: 0.8em;
   }
+
+  @media (max-width: 560px) {
+    text-align: center;
+
+    h2 {
+      font-size: 21px;
+    }
+
+    h1 {
+      font-size: 27px;
+    }
+  }
 `;
 
 export const Row = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
+
+  @media (max-width: 750px) {
+    .btn a {
+      font-size: 13px;
+    }
+  }
 `;
 
 export const Local = styled.div`
@@ -159,6 +190,13 @@ export const Local = styled.div`
     transition:
       all 0.2s ease,
       visibility;
+  }
+
+  @media (max-width: 560px) {
+    a,
+    p {
+      font-size: 10px !important;
+    }
   }
 `;
 

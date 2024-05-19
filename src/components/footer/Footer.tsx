@@ -25,7 +25,7 @@ const Footer = () => {
             <S.Content>
                 <S.Wrraper>
                     <S.Social>
-                        <Link title="ir para pagina inicial" href="/" draggable="false">
+                        <Link title="ir para pagina inicial" href="/" draggable="false" className='home'>
                             <Image src={logo} alt="logo" draggable="false" priority />
                         </Link>
                         <S.Network>
@@ -122,7 +122,7 @@ const Footer = () => {
                             </S.Title>
                             <Image src={chat} alt="chat" draggable="false" />
                         </S.Typography>
-                        <ToLink href={'/contact'} label={t('footer.talk_specialist')} />
+                        <ToLink href={'/contact'} label={t('footer.talk_specialist')} className='btn' />
                     </S.Row>
                     <S.Local>
                         <Link

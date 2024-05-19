@@ -225,10 +225,6 @@ export const Title_Gradient = styled.div`
     position: absolute;
     top: -7px;
     left: 0px;
-
-    @media (max-width: 750px) {
-      font-size: calc(34px - 7px);
-    }
   }
 
   h1 {
@@ -246,9 +242,18 @@ export const Title_Gradient = styled.div`
     -webkit-text-fill-color: transparent;
     z-index: 1;
     position: relative;
+  }
 
-    @media (max-width: 750px) {
-      font-size: calc(91px - 20px);
+  @media (max-width: 560px) {
+    margin: 22px 0 10px;
+
+
+    h2 {
+      font-size: 17px;
+    }
+
+    h1 {
+      font-size: 48px;
     }
   }
 `;
@@ -260,8 +265,13 @@ export const Container_Share = styled.div`
     position: absolute;
     top: auto;
     right: auto;
-    bottom: -55px;
     left: 10px;
+    width: 65px;
+
+    @media (max-width: 560px) {
+      bottom: -15px;
+      width: 27px;
+    }
   }
 `;
 
