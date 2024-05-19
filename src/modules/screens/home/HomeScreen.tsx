@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // React
-import { useRef, useState, useEffect, Fragment } from 'react';
+import { useRef, useState, useEffect, Fragment, useCallback } from 'react';
 
 // Assets
 import bg_hero from 'assets/components/bg_hero.png';
@@ -25,6 +25,7 @@ import { dataCarrousel } from './Home.constants';
 
 const HomeScreen = () => {
   const t = useTranslations();
+  const [isMobile, setIsMobile] = useState(false);
 
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
@@ -48,11 +49,14 @@ const HomeScreen = () => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (!isHovered) {
-        nextSlide();
-      }
-    }, 7000);
+    const intervalId = setInterval(
+      () => {
+        if (!isHovered) {
+          nextSlide();
+        }
+      },
+      !isMobile ? 5000 : 3000
+    );
 
     return () => clearInterval(intervalId);
   }, [isHovered]);
@@ -91,6 +95,19 @@ const HomeScreen = () => {
       }
     };
   }, [currentSlideIndex, functionCalled]);
+
+  const handleResize = useCallback(() => {
+    setIsMobile(window.innerWidth < 560 ?? false);
+  }, [setIsMobile]);
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [handleResize]);
 
   return (
     <S.Container>
@@ -200,18 +217,19 @@ const HomeScreen = () => {
                 </S.Carrousel_Content>
               ))}
             </S.Carrousel_Inner>
-
-            <S.Control>
-              <ol>
-                {dataCarrousel.map((item, index) => (
-                  <li
-                    key={index}
-                    onClick={() => selectItem(index)}
-                    className={currentSlideIndex === index ? 'active' : ''}
-                  />
-                ))}
-              </ol>
-            </S.Control>
+            {!isMobile && (
+              <S.Control>
+                <ol>
+                  {dataCarrousel.map((item, index) => (
+                    <li
+                      key={index}
+                      onClick={() => selectItem(index)}
+                      className={currentSlideIndex === index ? 'active' : ''}
+                    />
+                  ))}
+                </ol>
+              </S.Control>
+            )}
             <S.Absolute_Btn>
               <S.Btn onClick={nextSlide}>
                 <Image src={next_prev} alt="next" draggable="false" />

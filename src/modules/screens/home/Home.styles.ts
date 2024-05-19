@@ -247,7 +247,6 @@ export const Title_Gradient = styled.div`
   @media (max-width: 560px) {
     margin: 22px 0 10px;
 
-
     h2 {
       font-size: 17px;
     }
@@ -280,7 +279,6 @@ export const Carrousel_Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  max-height: 725px;
   min-height: 725px;
 `;
 
@@ -494,13 +492,23 @@ export const Container_Banner = styled.div<{
       left: ${props => props.leftPng};
       z-index: 1;
     }
+
+    @media (max-width: 560px) {
+      position: static;
+    }
+  }
+
+  @media (max-width: 560px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
 export const Contact_Intro = styled.section`
   display: flex;
   justify-content: flex-end;
-  height: 539px;
+  min-height: 539px;
   background-blend-mode: multiply;
   background-image: url(${bg_fixed.src});
   background-clip: border-box;
@@ -514,7 +522,7 @@ export const Inner = styled.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin-top: 64px;
+  margin: 64px 0;
   padding: 0 26px;
 
   .row {
