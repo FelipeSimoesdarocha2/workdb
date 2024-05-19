@@ -8,7 +8,7 @@ const Document = () => {
         <meta name="application-name" content="WORKDB" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Waiuru Admin" />
+        <meta name="apple-mobile-web-app-title" content="Workdb" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/browserconfig.xml" />

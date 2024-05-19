@@ -40,6 +40,6 @@ yarn run prettier --list-different "**/*.{json,ts,tsx}"
 
 ```bash
 yarn build
-docker build -t waiuru .
-docker run -p 3000:3000 -d waiuru
+docker build -t workdb.
+docker run -p 3000:3000 -d workdb
 ```
