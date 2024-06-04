@@ -13,6 +13,7 @@ import { Storage } from 'components/storage';
 import { TechSavvy } from 'components/techSavvy';
 import { Traceability } from 'components/traceability';
 import { Transforming } from 'components/transforming';
+import { WeBoost } from 'components/we_boost';
 
 const DataEngineeringScreen = () => {
   const t = useTranslations();
@@ -47,6 +48,7 @@ const DataEngineeringScreen = () => {
       <Storage />
       <Innovate />
       <Traceability />
+      <WeBoost />
     </S.Container>
   );
 };

@@ -23,7 +23,7 @@ export const Component = styled.div`
 
   .bg {
     position: absolute;
-    opacity: 0.6;
+    opacity: 0.7;
     height: 100%;
     width: 100%;
     z-index: 1;
