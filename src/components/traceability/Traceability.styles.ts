@@ -1,11 +1,11 @@
 // Assets
-import performance from 'assets/pages/dataEngineering/storage.webp';
+import performance from 'assets/pages/dataEngineering/traceability.webp';
 
 import styled from 'styled-components';
 
 export const Component = styled.div`
   display: flex;
-  min-height: 434px;
+  min-height: 400px;
   background-blend-mode: multiply;
   background-image: url(${performance.src});
   background-clip: border-box;

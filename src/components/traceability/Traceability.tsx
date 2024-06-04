@@ -1,21 +1,21 @@
 // Styles
-import * as S from './Performance.styles';
+import * as S from './Traceability.styles';
 
 // i18n
 import useTranslations from 'i18n';
 
 // Constants
-import { performance } from './Performance.constants';
+import { traceability } from './Traceability.constants';
 
-const Performance = () => {
+const Traceability = () => {
     const t = useTranslations();
 
     return (
         <S.Component>
             <S.Container>
-                <S.Title>Monitoramento e Desempenho</S.Title>
+                <S.Title>Rastreabilidade e Conformidade</S.Title>
                 <S.Content>
-                    {performance.map((item, index) => (
+                    {traceability.map((item, index) => (
                         <S.Card key={index}>
                             <S.Typography>
                                 <h1>{item.title}</h1>
@@ -32,4 +32,4 @@ const Performance = () => {
     );
 };
 
-export default Performance;
+export default Traceability;

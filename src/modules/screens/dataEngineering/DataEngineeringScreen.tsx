@@ -7,9 +7,11 @@ import useTranslations from 'i18n';
 // Components
 import { AboutDataEngineering } from 'components/about_data_engineering';
 import { Analysis } from 'components/analysis';
+import { Innovate } from 'components/innovate';
 import { Performance } from 'components/performance';
 import { Storage } from 'components/storage';
 import { TechSavvy } from 'components/techSavvy';
+import { Traceability } from 'components/traceability';
 import { Transforming } from 'components/transforming';
 
 const DataEngineeringScreen = () => {
@@ -43,7 +45,8 @@ const DataEngineeringScreen = () => {
       <Analysis />
       <TechSavvy />
       <Storage />
-      <Performance />
+      <Innovate />
+      <Traceability />
     </S.Container>
   );
 };

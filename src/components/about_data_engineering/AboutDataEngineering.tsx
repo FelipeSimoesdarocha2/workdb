@@ -24,7 +24,6 @@ const AboutDataEngineering = () => {
                         Ferramentas <strong>versáteis adaptáveis</strong> às necessidades da sua empresa,
                         <strong> OTIMIZANDO A EFICÊNCIA OPERACIONAL.</strong>
                     </h1>
-
                     <p
                         dangerouslySetInnerHTML={{
                             __html: paragraph.replace(
