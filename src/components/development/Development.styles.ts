@@ -6,7 +6,7 @@ export const Component = styled.div`
   width: 100%;
   height: 100%;
   background-color: #fafafa;
-  min-height: 386px;
+  min-height: 500px;
 `;
 
 export const Container = styled.div`
@@ -14,13 +14,18 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 46px;
+  gap: 64px;
   width: 100%;
-  margin: 68px 0 0;
+  margin: 103px 0 0;
 
   @media (max-width: 1100px) {
-    gap: 2rem;
     padding: 0 2rem 0;
+    gap: 21px;
+  }
+
+  @media (max-width: 560px) {
+    margin: 26px 0 64px;
+    gap: 21px;
   }
 `;
 
@@ -30,12 +35,17 @@ export const Title = styled.div`
   font-weight: bold;
   line-height: 1em;
   font-family: 'poppins', sans-serif;
+  text-align: center;
+  max-width: 716px;
+
+  @media (max-width: 1100px) {
+    font-size: 17px;
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
   justify-content: center;
-  gap: 50px;
   width: 100%;
   height: 100%;
 `;
@@ -44,11 +54,20 @@ export const Typography = styled.div`
   display: flex;
   gap: 30px;
 
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+
   p {
     color: #7a7a7a;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8em;
-    text-align: center;
+    letter-spacing: normal;
     font-family: 'open sans', sans-serif;
+    max-width: 600px;
+  }
+
+  p:last-child {
+    max-width: 547px;
   }
 `;

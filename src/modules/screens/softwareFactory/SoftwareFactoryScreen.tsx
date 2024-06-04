@@ -4,6 +4,11 @@ import * as S from './SoftwareFactory.styles';
 // i18n
 import useTranslations from 'i18n';
 
+// Components
+import { Development } from 'components/development';
+import { Languages } from 'components/languages';
+import { MainServices } from 'components/mainServices';
+
 const SoftwareFactoryScreen = () => {
   const t = useTranslations();
 
@@ -26,6 +31,9 @@ const SoftwareFactoryScreen = () => {
           />
         </div>
       </S.Content>
+      <Development />
+      <MainServices />
+      <Languages />
     </S.Container>
   );
 };

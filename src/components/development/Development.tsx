@@ -15,7 +15,7 @@ const Development = () => {
     return (
         <S.Component>
             <S.Container>
-                <S.Title>Sustentação e Otimização para o Ambiente Tecnológico</S.Title>
+                <S.Title>Desenvolvimento de Software sob medida para potencializar seu negócio.</S.Title>
                 <S.Content>
                     <S.Typography>
                         <p
@@ -26,7 +26,10 @@ const Development = () => {
 
                         <p
                             dangerouslySetInnerHTML={{
-                                __html: paragraph_two.replace(/(qualquer linguagem de programação|80 certificações|principais tecnologias|confiáveis e seguras)/g, '<strong>$1</strong>'),
+                                __html: paragraph_two.replace(
+                                    /(qualquer linguagem de programação|80 certificações|principais tecnologias|confiáveis e seguras)/g,
+                                    '<strong>$1</strong>'
+                                ),
                             }}
                         />
                     </S.Typography>

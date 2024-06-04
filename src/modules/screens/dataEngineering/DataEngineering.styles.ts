@@ -44,6 +44,22 @@ export const Content = styled.section`
     width: 100%;
     z-index: 1;
   }
+
+  #image_container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .bg {
+    position: absolute;
+    opacity: 0.75;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+
+    background: rgb(16, 92, 134);
+  }
 `;
 
 export const Hero = styled.div`

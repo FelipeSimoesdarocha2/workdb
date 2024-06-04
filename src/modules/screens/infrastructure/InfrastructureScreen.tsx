@@ -5,7 +5,9 @@ import * as S from './Infrastructure.styles';
 import useTranslations from 'i18n';
 
 // Components
+import { Services } from 'components/services';
 import { Support } from 'components/support';
+import { Tools } from 'components/tools';
 
 const InfrastructureScreen = () => {
   const t = useTranslations();
@@ -33,6 +35,8 @@ const InfrastructureScreen = () => {
         </div>
       </S.Content>
       <Support />
+      <Services />
+      <Tools />
     </S.Container>
   );
 };

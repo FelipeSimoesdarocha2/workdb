@@ -33,8 +33,10 @@ const Monitoring = () => {
             />
           </S.Typography>
           <S.Container_Image>
-            <Image src={bg_hero} alt="" draggable="false" />
-            <Image src={banner_hero} alt="" draggable="false" />
+            <div>
+              <Image src={bg_hero} alt="" draggable="false" />
+              <Image src={banner_hero} alt="" draggable="false" />
+            </div>
           </S.Container_Image>
         </S.Content>
       </S.Container>

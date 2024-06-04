@@ -27,6 +27,9 @@ const Support = () => {
                     </S.Typography>
                 </S.Content>
             </S.Container>
+            <div id="image_container">
+                <div className="bg" />
+            </div>
         </S.Component>
     );
 };

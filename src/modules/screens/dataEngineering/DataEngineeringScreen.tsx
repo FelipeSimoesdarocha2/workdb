@@ -4,6 +4,14 @@ import * as S from './DataEngineering.styles';
 // i18n
 import useTranslations from 'i18n';
 
+// Components
+import { AboutDataEngineering } from 'components/about_data_engineering';
+import { Analysis } from 'components/analysis';
+import { Performance } from 'components/performance';
+import { Storage } from 'components/storage';
+import { TechSavvy } from 'components/techSavvy';
+import { Transforming } from 'components/transforming';
+
 const DataEngineeringScreen = () => {
   const t = useTranslations();
 
@@ -25,7 +33,17 @@ const DataEngineeringScreen = () => {
             src="https://video.wixstatic.com/video/11062b_edf7139cd7854e50a67e824e22586d1c/1080p/mp4/file.mp4"
           />
         </div>
+        <div id="image_container">
+          <div className="bgs" />
+        </div>
       </S.Content>
+      <Transforming />
+      <Performance />
+      <AboutDataEngineering />
+      <Analysis />
+      <TechSavvy />
+      <Storage />
+      <Performance />
     </S.Container>
   );
 };
