@@ -53,7 +53,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
               <Menu.Item menuItemKey="1" push="/about" name={t('menu.about')} keye={selectedKey} />
               <Menu.Itens
                 menuItemKey="2"
-                //  push="/solutions"
+                push="/solutions"
                 name={'menu.solutions'}
                 keye={selectedKey}
                 data={sub_menus}

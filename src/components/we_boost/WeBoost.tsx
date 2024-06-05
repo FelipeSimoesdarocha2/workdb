@@ -2,7 +2,6 @@
 import Image from 'next/image';
 
 // Assets
-
 import data_dog from 'assets/pages/dataEngineering/data_dog.webp';
 import elastic from 'assets/pages/dataEngineering/elastic.webp';
 import open_searsh from 'assets/pages/dataEngineering/open_searsh.webp';
