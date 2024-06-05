@@ -6,6 +6,7 @@ import useTranslations from 'i18n';
 
 // Components
 import { Download } from 'components/download';
+import { Organizations } from 'components/organizations';
 import { Solutions } from 'components/solutions';
 
 const CloudScreen = () => {
@@ -29,6 +30,7 @@ const CloudScreen = () => {
       </S.Content>
       <Solutions />
       <Download />
+      <Organizations />
     </S.Container>
   );
 };
