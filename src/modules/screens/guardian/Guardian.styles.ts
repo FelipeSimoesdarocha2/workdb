@@ -45,7 +45,6 @@ export const Content = styled.section`
     height: 100%;
     width: 100%;
     z-index: 1;
-
     background: rgb(16, 92, 134);
   }
 `;

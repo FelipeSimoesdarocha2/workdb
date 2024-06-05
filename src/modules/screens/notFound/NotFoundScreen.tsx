@@ -1,6 +1,3 @@
-// Next
-import { useRouter } from 'next/router';
-
 // Styles
 import * as S from './NotFound.styles';
 
@@ -11,12 +8,7 @@ import useTranslations from 'i18n';
 import { ToLink } from 'components/link';
 
 const NotFoundScreen = () => {
-  const router = useRouter();
   const t = useTranslations();
-
-  const handleBack = () => {
-    window.history.back();
-  };
 
   return (
     <S.Container>
