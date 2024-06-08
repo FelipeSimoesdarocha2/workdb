@@ -25,19 +25,11 @@ export const Container = styled.div`
   box-shadow: -8px -7px 20px 0 rgba(0, 0, 0, .1);
 
 
-
-
-
-
-
     width: 80%;
     height: 571px;
     max-width: 600px;
     max-height: 80%;
     padding: 0;
-    flex-direction: column;
-
-
 `;
 
 export const Header = styled.div`
@@ -51,7 +43,39 @@ export const Title = styled.h1`
   line-height: 1.33;
   font-family: 'HelveticaNeue', 'Helvetica Neue', 'helvetica', 'Sans-Serif';
 `;
+export const Close = styled.button``;
 
 export const Content = styled.div``;
 
-export const Close = styled.button``;
+export const Item = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  padding: 24px 0 24px 24px;;
+`;
+
+export const Typography = styled.div`
+display: flex;
+flex-direction: column;
+gap: 12px;
+
+h1 {
+color: #000;
+font-size: 16px;
+font-weight: normal;
+line-height: 1.33;
+font-family: 'HelveticaNeue', 'Helvetica Neue', 'helvetica', 'Sans-Serif';
+}
+
+p {
+color: #000;
+font-size: 12px;
+font-weight: normal;
+line-height: 1.33;
+font-family: 'HelveticaNeue', 'Helvetica Neue', 'helvetica', 'Sans-Serif';
+}
+`;
+
+
+
