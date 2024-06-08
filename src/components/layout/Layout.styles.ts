@@ -6,16 +6,16 @@ export const Container = styled.div`
   background-color: var(--white);
   position: relative;
 
-  div::-webkit-scrollbar {
-    width: 6px !important;
+  &::-webkit-scrollbar {
+    width: 8px !important;
   }
 
-  div::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     border-radius: 3px;
     background: rgba(63, 67, 80, 0.24);
   }
 
-  div::-webkit-scrollbar-thumb:hover {
+  &::-webkit-scrollbar-thumb:hover {
     background: rgba(63, 67, 80, 0.32);
   }
 

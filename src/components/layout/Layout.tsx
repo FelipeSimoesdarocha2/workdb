@@ -18,6 +18,7 @@ import { LayoutProps } from './models';
 
 // Components
 import { Cookie } from 'components/cookie';
+import { CookieModal } from 'components/cookieModal';
 import { Footer } from 'components/footer';
 import { Header } from 'components/header';
 import { Internationalization } from 'components/internationalization';
@@ -27,7 +28,7 @@ import { Menu } from 'components/menu';
 import { useLayout } from './useLayout';
 
 const Layout = ({ selectedKey, children }: LayoutProps) => {
-  const { t, isMenu, isMidle, isMobile, sub_menus, handleOpenMenu } = useLayout();
+  const { t, isMenu, isMidle, isMobile, sub_menus, cookieModal, setCookieModal, handleOpenMenu } = useLayout();
 
   return (
     <S.Container>
@@ -72,7 +73,8 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
       </Header>
       <S.Content>{children}</S.Content>
       <Footer />
-      <Cookie />
+      {cookieModal && <CookieModal />}
+      <Cookie OpenModal={() => setCookieModal(true)} />
       <Link
         className="whatsapp"
         target="_blank"

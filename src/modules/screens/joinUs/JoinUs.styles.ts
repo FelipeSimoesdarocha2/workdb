@@ -51,16 +51,19 @@ export const Typography = styled.div`
     color: #fff;
     font-size: 28px;
     font-weight: 400;
-    font-family: poppins, sans-serif;
     line-height: 1.2em;
+    font-family: 'poppins', sans-serif;
+    text-transform: uppercase;
+    max-width: 435px;
   }
 
-  h1 span {
+  h1 strong {
     color: rgb(0, 175, 211);
     font-weight: bold;
     font-size: 83px;
-    font-family: poppins, sans-serif;
+    font-family: 'poppins', sans-serif;
     line-height: 0.8em;
+    display: inline-block;
   }
 
   p {

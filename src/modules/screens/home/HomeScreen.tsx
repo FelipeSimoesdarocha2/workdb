@@ -113,20 +113,10 @@ const HomeScreen = () => {
     <S.Container>
       <S.Content>
         <S.Hero>
-          <S.Title>
-            <h1>
-              OTIMIZE,
-              <br />
-              ACELERE,
-              <br />
-              ALCANCE!
-            </h1>
-          </S.Title>
+          <S.Title>OTIMIZE, ACELERE, ALCANCE!</S.Title>
           <S.Sub_Title>
-            <h1>
-              Talentos e parcerias para <span>elevar</span> sua <span>TI</span> e <br /> <span>impulsionar</span> seu
-              <span>ROI.</span>
-            </h1>
+            Talentos e parcerias para <span>elevar</span> sua <span>TI</span> e <br /> <span>impulsionar</span> seu
+            <span>ROI.</span>
           </S.Sub_Title>
           <S.Action>
             <Link href={'/contact'} draggable="false">

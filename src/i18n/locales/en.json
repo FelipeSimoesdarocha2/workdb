@@ -56,6 +56,11 @@
         "talk_specialist": "talk to an expert",
         "offices": "offices"
     },
+    "join_us": {
+        "title": "work",
+        "sub_title": "with us",
+        "paragraph": "Join WorkDB and be a protagonist in the technological transformation alongside us!"
+    },
     "contact": {
         "title": "get in",
         "sub_title": "contact",

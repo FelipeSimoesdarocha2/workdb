@@ -11,6 +11,7 @@ export const useLayout = () => {
   const [isMenu, setIsMenu] = useState(false);
   const [isMidle, setIsMidle] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [cookieModal, setCookieModal] = useState(false);
 
   const t = useTranslations();
 
@@ -42,6 +43,8 @@ export const useLayout = () => {
     isMidle,
     isMobile,
     sub_menus,
+    cookieModal,
+    setCookieModal,
     handleOpenMenu,
   };
 };

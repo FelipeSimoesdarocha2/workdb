@@ -66,30 +66,27 @@ export const Hero = styled.div`
   }
 `;
 
-export const Title = styled.div`
-  h1 {
-    color: #00b5db;
-    font-size: 55px;
-    line-height: 1em;
-    letter-spacing: 0em;
-    text-transform: uppercase;
-    font-family: poppins-semibold, poppins, sans-serif;
+export const Title = styled.h1`
+  color: #00b5db;
+  font-size: 55px;
+  line-height: 1em;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  font-family: poppins-semibold, poppins, sans-serif;
+  max-width: 358px;
 
-    @media (max-width: 1101px) {
-      font-size: 44px;
-    }
+  @media (max-width: 1101px) {
+    font-size: 44px;
   }
 `;
 
 export const Sub_Title = styled.div`
-  h1 {
-    color: #fff;
-    font-size: 27px;
-    font-weight: 400;
+  color: #fff;
+  font-size: 27px;
+  font-weight: 400;
 
-    @media (max-width: 1101px) {
-      font-size: 18px;
-    }
+  @media (max-width: 1101px) {
+    font-size: 18px;
   }
 
   span {
@@ -129,12 +126,17 @@ export const Action = styled.div`
   }
 
   a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     color: #fff;
     font-size: 21px;
     font-weight: 700;
     letter-spacing: 0em;
     font-family: 'open sans', sans-serif;
     text-transform: uppercase;
+    padding: 0 20px;
 
     @media (max-width: 1101px) {
       font-size: 14px;

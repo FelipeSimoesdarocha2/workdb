@@ -56,6 +56,11 @@
         "talk_specialist": "fale com um especialista",
         "offices": "escritórios"
     },
+    "join_us": {
+        "title": "trabalhe",
+        "sub_title": "conosco",
+        "paragraph": "Faça parte da WorkDB e seja um protagonista na transformação tecnológica ao nosso lado!"
+    },
     "contact": {
         "title": "entre em",
         "sub_title": "contato",

@@ -19,19 +19,18 @@ import { Startup } from 'components/startup';
 const JoinUsScreen = () => {
   const t = useTranslations();
 
-  const paragraph = 'Faça parte da WorkDB e seja um protagonista na transformação tecnológica ao nosso lado!';
-
   return (
     <S.Container>
       <S.Content>
         <S.Typography>
           <h1>
-            TRABALHE
-            <span>CONOSCO</span>
+            {t('join_us.title')}
+            <br />
+            <strong>{t('join_us.sub_title')}</strong>
           </h1>
           <p
             dangerouslySetInnerHTML={{
-              __html: paragraph.replace(/(WorkDB|transformação|tecnológica)/g, '<strong>$1</strong>'),
+              __html: t('join_us.paragraph').replace(/(WorkDB|transformação|tecnológica)/g, '<strong>$1</strong>'),
             }}
           />
         </S.Typography>

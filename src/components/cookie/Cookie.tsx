@@ -11,13 +11,16 @@ import exit from 'assets/icons/exit.svg';
 // Styles
 import * as S from './Cookie.styles';
 
+// Models
+import { CookieProps } from './models';
+
 // i18n
 import useTranslations from 'i18n';
 
 // Universal-cookie
 import Cookie from 'universal-cookie';
 
-const ICookie = () => {
+const ICookie = ({ OpenModal }: CookieProps) => {
   const [showCookie, setShowCookie] = useState(false);
 
   const t = useTranslations();
@@ -41,13 +44,15 @@ const ICookie = () => {
     showCookie && (
       <S.Container>
         <S.Typography>
-          <p>{t('cookie.menu.typography.paragraph')}</p>
-          <Link href="/privacy-policy" draggable="false">
-            {t('cookie.menu.typography.link')}
-          </Link>
+          <p>
+            {t('cookie.menu.typography.paragraph')}
+            <Link href="/privacy-policy" draggable="false">
+              {t('cookie.menu.typography.link')}
+            </Link>
+          </p>
         </S.Typography>
         <S.Actions>
-          <button onClick={accept} className="settings">
+          <button onClick={OpenModal} className="settings">
             <p>{t('cookie.menu.actions.settings')}</p>
           </button>
           <button onClick={accept} className="acept">
