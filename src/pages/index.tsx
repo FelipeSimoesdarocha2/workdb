@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href={`https://workdb.com${asPath}`} />
       </Head>
-      <Layout>
+      <Layout selectedKey='0'>
         <HomeScreen />
       </Layout>
     </>

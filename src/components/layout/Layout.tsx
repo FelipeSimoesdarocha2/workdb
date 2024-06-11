@@ -23,6 +23,7 @@ import { Footer } from 'components/footer';
 import { Header } from 'components/header';
 import { Internationalization } from 'components/internationalization';
 import { Menu } from 'components/menu';
+import { MenuMobile } from 'components/menuMobile';
 
 // Hook
 import { useLayout } from './useLayout';
@@ -31,7 +32,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
   const { t, isMenu, isMidle, isMobile, sub_menus, cookieModal, setCookieModal, handleOpenMenu } = useLayout();
 
   return (
-    <S.Container>
+    <S.Container >
       <Header>
         {isMidle && (
           <S.MenuMobile onClick={handleOpenMenu}>
@@ -74,6 +75,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
       <S.Content>{children}</S.Content>
       <Footer />
       {cookieModal && <CookieModal />}
+      {isMenu && <>{isMidle && <MenuMobile sub_menus={sub_menus} selectedKey={selectedKey} isActive={isMenu} />}</>}
       <Cookie OpenModal={() => setCookieModal(true)} />
       <Link
         className="whatsapp"

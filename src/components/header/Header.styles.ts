@@ -4,12 +4,12 @@ export const Component = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
   position: fixed;
   width: 100%;
   height: 100px;
   background-color: rgba(16, 92, 134, 1);
   border-right: 1px solid #e9ebf1;
-  z-index: 100;
   transition: all 500ms ease-out;
 
   &.active {

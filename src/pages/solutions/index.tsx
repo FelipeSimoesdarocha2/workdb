@@ -28,7 +28,7 @@ const Solutions: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href={`https://workdb.com${asPath}`} />
       </Head>
-      <Layout selectedKey="3">
+      <Layout selectedKey="2">
         <SolutionsScreen />
       </Layout>
     </>
