@@ -56,6 +56,8 @@ export const Content = styled.div`
   height: 100%;
 
   padding: 0 24px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 `;
 
 export const Menus = styled.div`

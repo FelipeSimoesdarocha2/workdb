@@ -17,10 +17,19 @@ export const Container = styled.div`
   margin: 82px 0 62px;
   width: 100%;
 
+  @media (max-width: 560px) {
+    gap: 21px;
+    margin: 28px 0 47px;
+  }
+
   h1 {
     color: #00b5db;
     font-size: 34px;
-    font-family: poppins-semibold, poppins, sans-serif;
+    font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 21px;
+    }
   }
 `;
 
@@ -29,34 +38,58 @@ export const Itens = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1076px;
   width: 100%;
   height: 100%;
+  max-width: 1076px;
+
+  @media (max-width: 560px) {
+    gap: 18px;
+  }
 `;
 
 export const Item = styled.div`
   display: flex;
   width: 100%;
+  height: 344px;
   max-width: 332px;
   border-radius: 0px 30px 0px 30px;
   border: 2px solid rgba(0, 181, 219, 1);
-  height: 344px;
+
+  @media (max-width: 560px) {
+    max-width: 232px;
+    height: auto;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
   align-items: center;
+  gap: 2.5rem;
   width: 100%;
   margin: 24px 22px;
+
+  @media (max-width: 560px) {
+    gap: 10px;
+    margin: 24px 8px;
+
+    img {
+      max-width: 80px;
+      margin-bottom: 8px;
+    }
+  }
 
   h2 {
     color: #105c86;
     font-size: 23px;
     font-weight: 400;
     line-height: 0.8em;
-    font-family: poppins, sans-serif;
+    font-family: 'poppins', sans-serif;
+    text-align: center;
+
+    @media (max-width: 560px) {
+      font-size: 18px;
+    }
   }
 
   p {
@@ -64,5 +97,9 @@ export const Wrapper = styled.div`
     font-size: 18px;
     line-height: 1.4em;
     text-align: center;
+
+    @media (max-width: 560px) {
+      font-size: 15px;
+    }
   }
 `;

@@ -22,8 +22,8 @@ export const Container = styled.div`
   }
 
   @media (max-width: 560px) {
-    gap: 10px;
-    margin: 0 0 40px;
+    gap: 50px;
+    margin: 40px 0 40px;
   }
 `;
 
@@ -36,7 +36,11 @@ export const Card = styled.div`
   max-height: 305px;
 
   @media (max-width: 560px) {
-    transform: scale(0.6);
+    min-width: auto;
+
+    .company {
+      max-width: 217px;
+    }
   }
 
   #image_container {
@@ -47,17 +51,24 @@ export const Card = styled.div`
     width: 110%;
     bottom: -22px;
     z-index: 42;
+
+    @media (max-width: 560px) {
+      bottom: -9px;
+    }
   }
 
   #image_container img {
     position: absolute;
     width: 100%;
-    border-radius: 8px;
   }
 
   img {
     border-radius: 8px;
     z-index: 1;
+
+    @media (max-width: 560px) {
+      border-radius: 12px;
+    }
   }
 
   .line {
@@ -68,6 +79,11 @@ export const Card = styled.div`
     top: -22px;
     border-radius: 0px 30px 0px 30px;
     border: 2px solid rgba(0, 181, 219, 1);
+
+    @media (max-width: 560px) {
+    left: -24px;
+      right: 20px;
+    }
   }
 `;
 
@@ -77,21 +93,22 @@ export const History = styled.div`
   max-width: 644px;
   flex-wrap: wrap;
 
+  @media (max-width: 560px) {
+    justify-content: center;
+    padding: 0 22px;
+    max-width: 420px;
+  }
+
   p {
     flex-wrap: wrap;
     color: #7a7a7a;
     font-size: 18px;
     line-height: 1.4em;
-  }
 
-  @media (max-width: 560px) {
-    justify-content: center;
-    padding: 0 22px;
-
-    p {
+    @media (max-width: 560px) {
       font-size: 14px;
       text-align: center;
-      padding: 0 12px;
+      text-align: start;
     }
   }
 

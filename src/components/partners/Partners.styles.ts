@@ -13,6 +13,11 @@ export const Container = styled.div`
   justify-content: center;
   gap: 60px;
   margin: 63px 0 120px;
+
+  @media (max-width: 560px) {
+    gap: 41px;
+    margin: 31px 0 70px;
+  }
 `;
 
 export const Typography = styled.div`
@@ -23,6 +28,11 @@ export const Typography = styled.div`
     line-height: 1.3;
     text-align: center;
     font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 20px;
+      line-height: 0.95em;
+    }
   }
 
   span {
@@ -32,6 +42,10 @@ export const Typography = styled.div`
     line-height: 0.5em;
     display: inline-block;
     font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 25px;
+    }
   }
 `;
 
@@ -54,6 +68,10 @@ export const Itens = styled.div`
     flex-direction: column;
     gap: 60px;
   }
+
+  @media (max-width: 560px) {
+    gap: 34px;
+  }
 `;
 
 export const Item = styled.div`
@@ -63,11 +81,19 @@ export const Item = styled.div`
   gap: 20px;
   max-width: 300px;
 
+  @media (max-width: 560px) {
+    gap: 10px;
+  }
+
   p {
     color: #105c86;
     font-size: 16px;
     line-height: 1.2em;
     font-family: 'open sans', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 13px;
+    }
   }
 `;
 
@@ -78,4 +104,8 @@ export const Container_Image = styled.div`
   justify-content: center;
   width: 100%;
   height: 87px;
+
+  @media (max-width: 560px) {
+    height: auto;
+  }
 `;

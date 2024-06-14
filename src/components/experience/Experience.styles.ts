@@ -26,6 +26,14 @@ export const Component = styled.div`
     height: 100%;
     border: 2px solid #fff;
     border-radius: 0px 30px 0px 30px;
+
+    @media (max-width: 560px) {
+      max-width: 280px;
+      max-height: 109px;
+      left: -272px;
+      top: 50px;
+      border: 2px solid rgb(250 250 250 / 20%);
+    }
   }
 
   .line_left {
@@ -40,6 +48,13 @@ export const Component = styled.div`
     height: 100%;
     border: 2px solid rgb(0 181 219);
     border-radius: 0px 30px 0px 30px;
+
+    @media (max-width: 560px) {
+      max-width: 280px;
+      max-height: 109px;
+      left: -305px;
+      border: 2px solid rgb(0 175 211 / 20%);
+    }
   }
 
   .line_top_right {
@@ -54,6 +69,14 @@ export const Component = styled.div`
     height: 100%;
     border: 2px solid #fff;
     border-radius: 0px 30px 0px 30px;
+
+    @media (max-width: 560px) {
+      max-width: 280px;
+      max-height: 109px;
+      right: -256px;
+      top: 150px;
+      border: 2px solid rgb(250 250 250 / 20%);
+    }
   }
 
   .line_right {
@@ -68,6 +91,13 @@ export const Component = styled.div`
     height: 100%;
     border: 2px solid rgb(0 181 219);
     border-radius: 0px 30px 0px 30px;
+
+    @media (max-width: 560px) {
+      max-width: 280px;
+      max-height: 109px;
+      border: 2px solid rgb(0 175 211 / 20%);
+      top: auto;
+    }
   }
 
   background-image: radial-gradient(
@@ -93,6 +123,11 @@ export const Container = styled.div`
   align-items: center;
   gap: 40px;
   position: relative;
+
+  @media (max-width: 560px) {
+    flex-direction: column;
+    gap: 12px;
+  }
 `;
 
 export const Title = styled.div`
@@ -102,6 +137,11 @@ export const Title = styled.div`
     margin-top: 60px;
     font-style: italic;
     font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 19px;
+      margin-top: 37px;
+    }
   }
 
   span {
@@ -109,6 +149,10 @@ export const Title = styled.div`
     font-size: 29px;
     display: inline-block;
     font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 19px;
+    }
   }
 `;
 
@@ -122,6 +166,11 @@ export const Itens = styled.div`
     flex-wrap: wrap;
     gap: 100px;
     margin: 20px 0 50px;
+  }
+
+  @media (max-width: 560px) {
+    flex-direction: column;
+    gap: 19px;
   }
 `;
 
@@ -140,6 +189,10 @@ export const Item = styled.div`
     line-height: 1.1em;
     font-style: italic;
     font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 31px;
+    }
   }
 
   span {
@@ -149,6 +202,10 @@ export const Item = styled.div`
     line-height: 1.1em;
     font-style: italic;
     font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 31px;
+    }
   }
 
   p {

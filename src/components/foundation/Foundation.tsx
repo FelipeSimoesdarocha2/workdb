@@ -22,7 +22,7 @@ const Foundation = () => {
       <S.Container>
         <S.Card>
           <div className="line" />
-          <Image src={company} alt="company" draggable="false" />
+          <Image src={company} alt="company" draggable="false" className='company' />
           <div id="image_container">
             <Image src={shadow} alt="shadow" draggable="false" />
           </div>

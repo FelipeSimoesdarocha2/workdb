@@ -1,9 +1,13 @@
 // Next
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 // React
 import { useState, useEffect, useCallback } from 'react';
+
+// Assets
+import arrow_color from 'assets/icons/arrow_color.svg';
 
 // Styles
 import * as S from './Itens.styles';
@@ -38,13 +42,13 @@ const Itens = ({ name, data, push, keye, menuItemKey }: MenuItemProps) => {
         setIsOpen(!isOpen);
     };
 
-    console.log('isOpen', isOpen);
-
     return (
         <S.Component className={`${keye === menuItemKey ? 'active' : ''}`}>
             {isMobile ? (
-                <button onClick={handleToggle}>
+                <button onClick={handleToggle} className={'openBtn' + ' ' + `${isOpen ? 'open' : 'close'}`}>
+                    <span />
                     <p>{t(name)}</p>
+                    <Image src={arrow_color} alt="arrow" />
                 </button>
             ) : (
                 <Link href={push || ''} draggable={false}>

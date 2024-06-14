@@ -152,15 +152,13 @@ const ContactScreen = () => {
               </p>
             </S.Paragraph>
           </S.Typography>
-          <Image src={map} alt="map" draggable={false} priority />
+          <Image src={map} alt="map" draggable={false} priority className='map' />
         </S.Wrapper>
         <S.Maps>
           {locales.map((item, index) => (
             <S.Map key={index}>
               <iframe
                 src={item.link}
-                width="327"
-                height="237"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

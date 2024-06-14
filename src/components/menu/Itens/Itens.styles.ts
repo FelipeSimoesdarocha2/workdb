@@ -29,6 +29,27 @@ export const Component = styled.div`
     max-height: 60px;
   }
 
+  .openBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s ease-in-out;
+
+    img {
+      width: 12px;
+      height: 11px;
+    }
+  }
+
+  .open img {
+    transform: rotate(180deg);
+    transition: 500ms;
+  }
+
+  .close img {
+    transition: 500ms;
+  }
+
   a,
   p {
     color: #ffffff;

@@ -70,6 +70,10 @@ export const Itens = styled.div`
     flex-direction: column;
     margin: 50px 0;
   }
+
+  @media (max-width: 560px) {
+    gap: 34px;
+  }
 `;
 
 export const Item = styled.div`
@@ -81,7 +85,11 @@ export const Item = styled.div`
   h1 {
     color: #fafafa;
     font-size: 29px;
-    font-family: poppins-semibold, poppins, sans-serif;
+    font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 20px;
+    }
   }
 
   p {
@@ -89,10 +97,19 @@ export const Item = styled.div`
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     max-width: 401px;
+
+    @media (max-width: 560px) {
+      font-size: 13px;
+      max-width: 280px;
+    }
   }
 
   &:last-of-type p {
     max-width: 180px;
     text-align: center;
+
+    @media (max-width: 560px) {
+      max-width: 129.31px;
+    }
   }
 `;

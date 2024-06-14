@@ -33,4 +33,6 @@ export const Content = styled.div`
   width: 100%;
   max-width: 1160px;
   padding: 0 22px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 `;

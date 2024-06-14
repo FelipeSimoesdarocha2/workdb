@@ -14,7 +14,7 @@ const principles: PrinciplesProps[] = [
     },
     {
         title: 'VALORES',
-        description: 'Valorização humana; Ética e transparência; Agilidade;Inovação; Respeito e empatia; Excelência.',
+        description: 'Valorização humana; Ética e transparência; Agilidade; Inovação; Respeito e empatia; Excelência.',
     },
 ];
 

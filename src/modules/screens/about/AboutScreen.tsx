@@ -48,11 +48,9 @@ const AboutScreen = () => {
       <Principles />
       <Partners />
       <S.Contact>
-        <S.Container_Image id='img'>
-          <div>
-            <Image src={bg_hero} alt="banner_hero" draggable="false" />
-            <Image src={portrait} alt="banner_hero" draggable="false" />
-          </div>
+        <S.Container_Image>
+          <Image src={bg_hero} alt="banner_hero" draggable="false" />
+          <Image src={portrait} alt="banner_hero" draggable="false" />
         </S.Container_Image>
         <S.Content>
           <S.Typography>

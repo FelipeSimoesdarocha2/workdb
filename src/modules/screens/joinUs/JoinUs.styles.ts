@@ -14,12 +14,16 @@ export const Content = styled.section`
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 725px;
+  min-height: 725px;
   background-image: var(--bg_about);
   overflow: hidden;
 
   @media (max-width: 1101px) {
     flex-direction: column;
+  }
+
+  @media (max-width: 560px) {
+    min-height: 434px;
   }
 
   #image_container {
@@ -47,6 +51,16 @@ export const Typography = styled.div`
   z-index: 5;
   margin-top: 100px;
 
+  @media (max-width: 1101px) {
+    width: 100%;
+    padding: 0 22px;
+    margin-top: 124px;
+  }
+
+  @media (max-width: 560px) {
+    gap: 14px;
+  }
+
   h1 {
     color: #fff;
     font-size: 28px;
@@ -55,6 +69,10 @@ export const Typography = styled.div`
     font-family: 'poppins', sans-serif;
     text-transform: uppercase;
     max-width: 435px;
+
+    @media (max-width: 560px) {
+      font-size: 19px;
+    }
   }
 
   h1 strong {
@@ -64,6 +82,10 @@ export const Typography = styled.div`
     font-family: 'poppins', sans-serif;
     line-height: 0.8em;
     display: inline-block;
+
+    @media (max-width: 560px) {
+      font-size: 33px;
+    }
   }
 
   p {
@@ -71,6 +93,11 @@ export const Typography = styled.div`
     font-size: 24px;
     font-weight: 300;
     max-width: 481px;
+
+    @media (max-width: 560px) {
+      font-size: 13px;
+      max-width: 226px;
+    }
   }
 `;
 
@@ -84,7 +111,8 @@ export const Container_Image = styled.div`
   @media (max-width: 1101px) {
     margin: 0;
     max-height: 40%;
-    z-index: 1;
+    width: 100%;
+    justify-content: flex-end;
   }
 
   img:first-child {
@@ -92,14 +120,20 @@ export const Container_Image = styled.div`
     left: 0;
     right: auto;
     transform: rotate(180deg) translate(30%, 28%);
+
+    @media (max-width: 560px) {
+      max-width: 314px;
+      transform: inherit;
+      left: auto;
+      top: 70px;
+    }
   }
 
   img:last-child {
-    z-index: 10;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
     z-index: 1;
+
+    @media (max-width: 560px) {
+      max-width: 300px;
+    }
   }
 `;

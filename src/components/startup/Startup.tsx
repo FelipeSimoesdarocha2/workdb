@@ -19,7 +19,7 @@ const Startup = () => {
       <S.Container>
         <S.Card>
           <div className="line" />
-          <Image src={startup} alt="startup" draggable="false" />
+          <Image src={startup} alt="startup" draggable="false" className='startup' />
           <div id="image_container">
             <Image src={shadow} alt="shadow" draggable="false" />
           </div>

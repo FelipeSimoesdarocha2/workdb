@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Component = styled.div`
   width: 100%;
-  height: 100;
-  background-color: #fafafa;
+  height: 100%;
+  background-color: rgb(16, 92, 134);
 `;
 
 export const Container = styled.div`
@@ -17,6 +17,14 @@ export const Container = styled.div`
   @media (min-width: 1400px) {
     background-repeat: repeat;
     background-size: cover;
+  }
+
+  @media (max-width: 1101px) {
+    padding: 0 22px;
+  }
+
+  @media (max-width: 560px) {
+    min-height: 320px;
   }
 
   video {
@@ -54,6 +62,10 @@ export const Content = styled.div`
     flex-direction: column;
     margin: 50px 0;
   }
+
+  @media (max-width: 560px) {
+    gap: 39px;
+  }
 `;
 
 export const Item = styled.div`
@@ -61,6 +73,10 @@ export const Item = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 50px;
+
+  @media (max-width: 560px) {
+    gap: 21px;
+  }
 `;
 
 export const Typography = styled.div`
@@ -69,14 +85,21 @@ export const Typography = styled.div`
   align-items: center;
   gap: 33px;
 
+  @media (max-width: 560px) {
+    gap: 21px;
+  }
+
   h1 {
     color: #fafafa;
     font-size: 29px;
     font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 20px;
+    }
   }
 
   span {
-    font-family: 'poppins', sans-serif;
     display: inline-block;
     background-color: #00b5db;
   }
@@ -87,6 +110,10 @@ export const Typography = styled.div`
     line-height: 1.4em;
     font-family: 'poppins', sans-serif;
     max-width: 475px;
+
+    @media (max-width: 560px) {
+      font-size: 13px;
+    }
   }
 `;
 
@@ -94,7 +121,15 @@ export const Flag = styled.div`
   display: flex;
   gap: 70px;
 
+  @media (max-width: 560px) {
+    gap: 20px;
+  }
+
   img {
     max-width: 73px;
+
+    @media (max-width: 560px) {
+      max-width: 39px;
+    }
   }
 `;

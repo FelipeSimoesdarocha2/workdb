@@ -4,6 +4,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 80px;
+
+  @media (max-width: 560px) {
+    gap: 33px;
+  }
 `;
 
 export const Content = styled.div`
@@ -19,7 +23,7 @@ export const Content = styled.div`
   }
 
   @media (max-width: 560px) {
-    padding: 154.5px 0 64.5px;
+    padding: 124.5px 0 64.5px;
   }
 `;
 
@@ -33,11 +37,19 @@ export const Outer = styled.div`
   @media (max-width: 1101px) {
     margin-bottom: 0;
   }
+
+  @media (max-width: 560px) {
+    gap: 20px;
+  }
 `;
 
 export const HyperText = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 560px) {
+    align-items: center;
+  }
 
   h2 {
     color: #fff;
@@ -45,7 +57,11 @@ export const HyperText = styled.div`
     font-weight: 400;
     line-height: 1.2em;
     text-transform: uppercase;
-    font-family: poppins, sans-serif;
+    font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 18px;
+    }
   }
 
   h1 {
@@ -54,7 +70,11 @@ export const HyperText = styled.div`
     font-weight: bold;
     line-height: 0.8em;
     text-transform: uppercase;
-    font-family: poppins, sans-serif;
+    font-family: 'poppins', sans-serif;
+
+    @media (max-width: 560px) {
+      font-size: 31px;
+    }
   }
 `;
 
@@ -62,16 +82,30 @@ export const SubTitle = styled.div`
   width: 100%;
   max-width: 462px;
 
+  @media (max-width: 560px) {
+    max-width: 240px;
+  }
+
   h1 {
     color: #fff;
     font-size: 24px;
     font-weight: 200;
     line-height: 1.3em;
+
+    @media (max-width: 560px) {
+      font-size: 15px;
+      text-align: center;
+      font-weight: 300;
+    }
   }
 
   span {
     font-weight: 500;
     display: inline-block;
+
+    @media (max-width: 560px) {
+      font-weight: 700;
+    }
   }
 `;
 
@@ -83,6 +117,10 @@ export const Form = styled.div`
   gap: 2.5rem;
   width: 100%;
   max-width: 460px;
+
+  @media (max-width: 1101px) {
+    padding: 0 32px;
+  }
 `;
 
 export const Values = styled.div`
@@ -108,6 +146,11 @@ export const Button = styled.button`
   border-radius: 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+
+  @media (max-width: 560px) {
+    width: 100%;
+    height: 42px;
+  }
 
   &:hover {
     background: rgba(16, 92, 134, 1);
@@ -155,6 +198,11 @@ export const Local = styled.div`
   justify-content: center;
   gap: 60px;
   margin-bottom: 100px;
+
+  @media (max-width: 560px) {
+    gap: 10px;
+    margin-bottom: 52px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -165,10 +213,17 @@ export const Wrapper = styled.div`
   width: 100%;
   gap: 40px;
 
-
   @media (max-width: 1101px) {
     align-items: center;
     flex-direction: column;
+  }
+
+  @media (max-width: 560px) {
+    gap: 19px;
+
+    .map {
+      max-width: 314px;
+    }
   }
 `;
 
@@ -176,11 +231,21 @@ export const Typography = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (max-width: 560px) {
+    gap: 16px;
+  }
 `;
 
 export const Inner = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 560px) {
+    img {
+      max-width: 50px;
+    }
+  }
 `;
 
 export const Title = styled.div`
@@ -192,6 +257,10 @@ export const Title = styled.div`
     font-size: 28px;
     font-weight: 400;
     text-transform: uppercase;
+
+    @media (max-width: 560px) {
+      font-size: 19px;
+    }
   }
 
   h1 {
@@ -199,6 +268,10 @@ export const Title = styled.div`
     color: rgb(0, 160, 211);
     line-height: 0.7em;
     text-transform: uppercase;
+
+    @media (max-width: 560px) {
+      font-size: 33px;
+    }
   }
 `;
 
@@ -210,6 +283,10 @@ export const Paragraph = styled.div`
     color: #105c86;
     font-size: 24px;
     font-weight: 200;
+
+    @media (max-width: 560px) {
+      font-size: 16px;
+    }
   }
 
   span {
@@ -224,6 +301,10 @@ export const Maps = styled.div`
   justify-content: center;
   gap: 4rem;
 
+  @media (max-width: 560px) {
+    gap: 12px;
+  }
+
   @media (max-width: 1101px) {
     flex-direction: column;
   }
@@ -235,9 +316,19 @@ export const Map = styled.div`
   align-items: center;
   gap: 2rem;
 
+  @media (max-width: 560px) {
+    gap: 12px;
+  }
+
   iframe {
     border: none;
     border-radius: 5px;
+    width: 327px;
+    height: 237px;
+
+    @media (max-width: 560px) {
+      width: 280px;
+    }
   }
 
   iframe:hover {
@@ -249,5 +340,9 @@ export const Map = styled.div`
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media (max-width: 560px) {
+      font-size: 21px;
+    }
   }
 `;

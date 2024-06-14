@@ -21,11 +21,10 @@ const Opportunities = () => {
   return (
     <S.Component>
       <S.Container>
-        <S.Container_Image id="img">
-          <div>
-            <Image src={bg_hero} alt="banner_hero" draggable="false" />
-            <Image src={opportunities} alt="banner_hero" draggable="false" />
-          </div>
+        <S.Container_Image>
+          <Image src={bg_hero} alt="bg_hero" draggable="false" />
+          <Image src={opportunities} alt="opportunities" draggable="false" className='opportunities' />
+          <ToLink href={'/contact'} label={'Entre em contato'} className='contact_mobile' />
         </S.Container_Image>
         <S.Content>
           <S.Title>
@@ -43,7 +42,7 @@ const Opportunities = () => {
             </p>
             <p>Sua oportunidade pode estar mais próxima do que você imagina!</p>
           </S.Typography>
-          <ToLink href={'/contact'} label={'Entre em contato'} />
+          <ToLink href={'/contact'} label={'Entre em contato'} className='contact_desktop' />
         </S.Content>
       </S.Container>
     </S.Component>
