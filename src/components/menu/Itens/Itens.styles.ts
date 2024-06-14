@@ -165,7 +165,6 @@ export const Content = styled.div`
   }
 
   .item {
-    padding: 7px 11px;
     margin-bottom: 6px;
     width: 100%;
     background:
