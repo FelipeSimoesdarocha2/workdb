@@ -4,8 +4,11 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fafafa;
   min-height: 317px;
+
+  @media (max-width: 560px) {
+    min-height: 136px;
+  }
 `;
 
 export const Carrousel = styled.div`
@@ -17,9 +20,7 @@ export const Carrousel = styled.div`
   min-height: 186px;
 
   @media (max-width: 560px) {
-    background-color: #f1f1f1;
     min-height: auto;
-    padding: 47px 0;
   }
 
   .wrapper {

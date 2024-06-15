@@ -69,7 +69,7 @@ const Layout = ({ selectedKey, children }: LayoutProps) => {
           <Link href="https://www.workdatacloud.com" draggable="false" target="_blank">
             <Image src={!isMobile ? workdatacloud : workdataminicloud} alt="workdatacloud" draggable="false" />
           </Link>
-          {!isMobile && <Internationalization />}
+          {!isMidle && <Internationalization />}
         </S.Actions>
       </Header>
       <S.Content>{children}</S.Content>

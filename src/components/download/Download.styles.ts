@@ -63,6 +63,9 @@ export const Inner = styled.div`
   }
 
   .action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     max-width: 523px;
 
     @media (max-width: 560px) {

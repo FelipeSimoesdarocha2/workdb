@@ -21,7 +21,7 @@ export const Container = styled.div`
 
   .whatsapp {
     position: fixed;
-    z-index: 998;
+    z-index: 997;
     bottom: 30px;
     right: 30px;
 

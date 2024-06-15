@@ -8,6 +8,7 @@ import useTranslations from 'i18n';
 import { Download } from 'components/download';
 import { Organizations } from 'components/organizations';
 import { Solutions } from 'components/solutions';
+import { Trajectory } from 'components/trajectory';
 
 const CloudScreen = () => {
   const t = useTranslations();
@@ -31,6 +32,7 @@ const CloudScreen = () => {
       <Solutions />
       <Download />
       <Organizations />
+      <Trajectory />
     </S.Container>
   );
 };
